@@ -1,0 +1,4 @@
+#google_translate_element {
+  z-index: 9999; /* Ensure the translate widget appears on top */
+  position: relative;
+}
