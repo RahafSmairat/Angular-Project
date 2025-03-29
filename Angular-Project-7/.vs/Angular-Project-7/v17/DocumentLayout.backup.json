@@ -1,12 +1,122 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\Orange\\Desktop\\Angular-Project-7\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{8075D0B9-E74D-50BA-3C42-CF8594709BCF}|angular-project-7.client\\angular-project-7.client.esproj|c:\\users\\orange\\desktop\\angular-project-7\\angular-project-7.client\\src\\app\\user\\edit-profile\\edit-profile.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8075D0B9-E74D-50BA-3C42-CF8594709BCF}|angular-project-7.client\\angular-project-7.client.esproj|solutionrelative:angular-project-7.client\\src\\app\\user\\edit-profile\\edit-profile.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8075D0B9-E74D-50BA-3C42-CF8594709BCF}|angular-project-7.client\\angular-project-7.client.esproj|c:\\users\\orange\\desktop\\angular-project-7\\angular-project-7.client\\src\\app\\user\\order-items\\order-items.component.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{8075D0B9-E74D-50BA-3C42-CF8594709BCF}|angular-project-7.client\\angular-project-7.client.esproj|solutionrelative:angular-project-7.client\\src\\app\\user\\order-items\\order-items.component.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8075D0B9-E74D-50BA-3C42-CF8594709BCF}|angular-project-7.client\\angular-project-7.client.esproj|c:\\users\\orange\\desktop\\angular-project-7\\angular-project-7.client\\src\\app\\user\\edit-profile\\edit-profile.component.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{8075D0B9-E74D-50BA-3C42-CF8594709BCF}|angular-project-7.client\\angular-project-7.client.esproj|solutionrelative:angular-project-7.client\\src\\app\\user\\edit-profile\\edit-profile.component.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8075D0B9-E74D-50BA-3C42-CF8594709BCF}|angular-project-7.client\\angular-project-7.client.esproj|c:\\users\\orange\\desktop\\angular-project-7\\angular-project-7.client\\src\\app\\user\\order-items\\order-items.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8075D0B9-E74D-50BA-3C42-CF8594709BCF}|angular-project-7.client\\angular-project-7.client.esproj|solutionrelative:angular-project-7.client\\src\\app\\user\\order-items\\order-items.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8075D0B9-E74D-50BA-3C42-CF8594709BCF}|angular-project-7.client\\angular-project-7.client.esproj|c:\\users\\orange\\desktop\\angular-project-7\\angular-project-7.client\\src\\app\\user\\order-items\\order-items.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{8075D0B9-E74D-50BA-3C42-CF8594709BCF}|angular-project-7.client\\angular-project-7.client.esproj|solutionrelative:angular-project-7.client\\src\\app\\user\\order-items\\order-items.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8075D0B9-E74D-50BA-3C42-CF8594709BCF}|angular-project-7.client\\angular-project-7.client.esproj|c:\\users\\orange\\desktop\\angular-project-7\\angular-project-7.client\\src\\app\\user\\profile\\profile.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8075D0B9-E74D-50BA-3C42-CF8594709BCF}|angular-project-7.client\\angular-project-7.client.esproj|solutionrelative:angular-project-7.client\\src\\app\\user\\profile\\profile.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "edit-profile.component.css",
+              "DocumentMoniker": "C:\\Users\\Orange\\Desktop\\Angular-Project-7\\angular-project-7.client\\src\\app\\User\\edit-profile\\edit-profile.component.css",
+              "RelativeDocumentMoniker": "angular-project-7.client\\src\\app\\User\\edit-profile\\edit-profile.component.css",
+              "ToolTip": "C:\\Users\\Orange\\Desktop\\Angular-Project-7\\angular-project-7.client\\src\\app\\User\\edit-profile\\edit-profile.component.css",
+              "RelativeToolTip": "angular-project-7.client\\src\\app\\User\\edit-profile\\edit-profile.component.css",
+              "ViewState": "AgIAACIAAAAAAAAAAADwvy4AAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-03-29T20:03:05.007Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "edit-profile.component.html",
+              "DocumentMoniker": "C:\\Users\\Orange\\Desktop\\Angular-Project-7\\angular-project-7.client\\src\\app\\User\\edit-profile\\edit-profile.component.html",
+              "RelativeDocumentMoniker": "angular-project-7.client\\src\\app\\User\\edit-profile\\edit-profile.component.html",
+              "ToolTip": "C:\\Users\\Orange\\Desktop\\Angular-Project-7\\angular-project-7.client\\src\\app\\User\\edit-profile\\edit-profile.component.html",
+              "RelativeToolTip": "angular-project-7.client\\src\\app\\User\\edit-profile\\edit-profile.component.html",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-03-29T20:02:53.591Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "order-items.component.ts",
+              "DocumentMoniker": "C:\\Users\\Orange\\Desktop\\Angular-Project-7\\angular-project-7.client\\src\\app\\User\\order-items\\order-items.component.ts",
+              "RelativeDocumentMoniker": "angular-project-7.client\\src\\app\\User\\order-items\\order-items.component.ts",
+              "ToolTip": "C:\\Users\\Orange\\Desktop\\Angular-Project-7\\angular-project-7.client\\src\\app\\User\\order-items\\order-items.component.ts",
+              "RelativeToolTip": "angular-project-7.client\\src\\app\\User\\order-items\\order-items.component.ts",
+              "ViewState": "AgIAADoAAAAAAAAAAAAAAEwAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-03-29T19:54:56.07Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "order-items.component.css",
+              "DocumentMoniker": "C:\\Users\\Orange\\Desktop\\Angular-Project-7\\angular-project-7.client\\src\\app\\User\\order-items\\order-items.component.css",
+              "RelativeDocumentMoniker": "angular-project-7.client\\src\\app\\User\\order-items\\order-items.component.css",
+              "ToolTip": "C:\\Users\\Orange\\Desktop\\Angular-Project-7\\angular-project-7.client\\src\\app\\User\\order-items\\order-items.component.css",
+              "RelativeToolTip": "angular-project-7.client\\src\\app\\User\\order-items\\order-items.component.css",
+              "ViewState": "AgIAACUAAAAAAAAAAADwvz8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-03-29T19:54:35.4Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "order-items.component.html",
+              "DocumentMoniker": "C:\\Users\\Orange\\Desktop\\Angular-Project-7\\angular-project-7.client\\src\\app\\User\\order-items\\order-items.component.html",
+              "RelativeDocumentMoniker": "angular-project-7.client\\src\\app\\User\\order-items\\order-items.component.html",
+              "ToolTip": "C:\\Users\\Orange\\Desktop\\Angular-Project-7\\angular-project-7.client\\src\\app\\User\\order-items\\order-items.component.html",
+              "RelativeToolTip": "angular-project-7.client\\src\\app\\User\\order-items\\order-items.component.html",
+              "ViewState": "AgIAACwAAAAAAAAAAAAAAEEAAABbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-03-29T19:54:17.478Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "profile.component.html",
+              "DocumentMoniker": "C:\\Users\\Orange\\Desktop\\Angular-Project-7\\angular-project-7.client\\src\\app\\User\\profile\\profile.component.html",
+              "RelativeDocumentMoniker": "angular-project-7.client\\src\\app\\User\\profile\\profile.component.html",
+              "ToolTip": "C:\\Users\\Orange\\Desktop\\Angular-Project-7\\angular-project-7.client\\src\\app\\User\\profile\\profile.component.html",
+              "RelativeToolTip": "angular-project-7.client\\src\\app\\User\\profile\\profile.component.html",
+              "ViewState": "AgIAAGgAAAAAAAAAAADwv3oAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-03-29T19:44:24.448Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }

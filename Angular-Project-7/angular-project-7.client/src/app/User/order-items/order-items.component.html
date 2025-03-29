@@ -1,15 +1,74 @@
+<!--<div class="shopping-cart-form table-responsive" >
+  <form action="#" method="post">
+    <table class="table text-center" style="margin-top:10vw; padding-left:1vw; padding-right:1vw">
+      <thead>
+        <tr>
+          <th class="product-thumbnail">&nbsp;</th>
+          <th class="product-name">Product</th>
+          <th class="product-price">Price</th>
+          <th class="product-quantity">Quantity</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="tbody-item" *ngFor="let item of orderItems">
+          <td class="product-thumbnail">
+            <div class="thumb">
+              <a href="single-product.html">
+                <img [src]="item.productImage" alt="{{item.productName}}" width="68" height="84" alt="Image-HasTech">
+              </a>
+            </div>
+          </td>
+          <td class="product-name">
+            <a class="title" href="single-product.html">{{item.productName}}</a>
+          </td>
+          <td class="product-price">
+            <span class="price">{{item.productprice}}</span>
+          </td>
+          <td class="product-quantity">
+            <div class="pro-qty">
+              <input type="text" class="quantity" title="Quantity" value="1">
+            </div>
+          </td>
+        </tr>
+    </tbody>
+    </table>
+  </form>
+</div>-->
 
 
-<div class="container mt-4" style="margin-left: 250px; max-width: calc(100% - 250px);">
-  <div class="row" style="gap: 15px;">
-    <div class="col-md-3" *ngFor="let item of orderItems">
-      <div class="card product-card shadow">
-        <div class="card-body">
-          <h5 class="card-title">{{item.productName}}</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        </div>
-      </div>
-    </div>
-  </div>
+<div class="shopping-cart-form table-responsive">
+  <form action="#" method="post">
+    <table class="table text-center custom-table" style="margin-top:10vw">
+      <thead>
+        <tr>
+          <th class="product-thumbnail">&nbsp;</th>
+          <th class="product-name">Product</th>
+          <th class="product-price">Price</th>
+          <th class="product-quantity">Quantity</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="tbody-item" *ngFor="let item of orderItems">
+          <td class="product-thumbnail">
+            <div class="thumb">
+              <img [src]="item.productImage" alt="{{item.productName}}" width="68" height="84">
+            </div>
+          </td>
+          <td class="product-name">
+            <a class="title">{{item.productName}}</a>
+          </td>
+          <td class="product-price">
+            <span class="price">{{item.productprice}}</span>
+          </td>
+          <td class="product-quantity">
+            <div class="pro-qty">
+              <!--<p>{{item.quantity}}</p>-->
+              <input type="text" class="quantity" title="Quantity" value="{{item.quantity}}" disabled>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </form>
 </div>
 

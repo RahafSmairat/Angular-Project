@@ -1,0 +1,125 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #FFF3DA;
+  margin: 0;
+  padding: 0;
+}
+
+.page-header-title {
+  color: #FF948A;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+  .table th, .table td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .table th {
+    background-color: #FF948A;
+    color: white;
+    font-weight: bold;
+  }
+
+.product-thumbnail img {
+  border-radius: 8px;
+}
+
+.product-remove .remove {
+  background: none;
+  border: none;
+  font-size: 18px;
+  color: red;
+  cursor: pointer;
+}
+
+.pro-qty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.quantity-btn {
+  background-color: #FF948A;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+  .quantity-btn:hover {
+    background-color: #ff7a6d;
+  }
+
+.cart-totals-wrap {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+  .cart-totals-wrap h2 {
+    color: #FF948A;
+    margin-bottom: 15px;
+  }
+
+  .cart-totals-wrap table {
+    width: 100%;
+  }
+
+.checkout-button {
+  background-color: #FF948A;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+  .checkout-button:hover {
+    background-color: #ff7a6d;
+  }
+
+.coupon-wrap {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.btn-coupon {
+  background-color: #FF948A;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+  .btn-coupon:hover {
+    background-color: #ff7a6d;
+  }
+
+
+  .btn-coupon[_ngcontent-ng-c187850835] {
+    padding: 4px 15px;
+  }
+
+
+.checkout-button[_ngcontent-ng-c187850835] {
+  padding: -1px 20px;
+}

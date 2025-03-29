@@ -4,6 +4,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { UserService } from '../../Services/user.service';
 import { switchMap } from 'rxjs';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-profile',
@@ -85,5 +86,40 @@ export class ProfileComponent {
     });
   }
 
+  //selectedPaymentType: any;
+  //addPayment(data: any) {
 
+  //  const payment = { userId: this.userData.id, type: data.type.value, cardNumber: data.cardNumber, expiryDate: data.expiryDate }
+  //  this._ser.postToPayments(payment).subscribe(() => {
+  //    Swal.fire({
+  //      title: 'Payment Method Was Added!',
+  //      text: 'The Payment Method has been successfully added.',
+  //      icon: 'success',
+  //      confirmButtonText: 'OK',
+  //      color: '#5a2a2a',
+  //      confirmButtonColor: '#ff6565',
+  //    });
+  //  })
+  //}
+
+  paymentData = {
+    type: '',
+    cardNumber: '',
+    expiryDate: '',
+    userId: '',
+    cvc: ''
+  };
+
+  submitPayment(form: any) {
+    this.paymentData.userId = this.userData.id
+      this._ser.postToPayments(this.paymentData).subscribe(() => {
+        Swal.fire({
+                title: 'Payment Method Was Added!',
+                text: 'The Payment Method has been successfully added.',
+                icon: 'success',
+                confirmButtonText: 'OK',
+                color: '#5a2a2a',
+                confirmButtonColor: '#ff6565',
+      });        })
+  }
 }

@@ -54,12 +54,6 @@ export class OrderItemsComponent {
     })
   }
 
-  //getOrderrItems() {
-  //  this.Order = this.Activep.snapshot.paramMap.get('id');
-  //  this._ser.getOrdersItems().subscribe((data) => {
-  //    this.orderItems = data.filter((Products: any) => Products.orderId == this.Order);
-  //  })
-  //}
 
   getOrderrItems() {
     this.Order = this.Activep.snapshot.paramMap.get('id');
@@ -71,14 +65,23 @@ export class OrderItemsComponent {
           .filter((item: any) => item.orderId == this.Order) // فلترة الطلبات حسب orderId
           .map((item: any) => {
             let product = productsData.find((p: any) => p.id == item.productId); // البحث عن المنتج
+
+            // إذا لم يجد المنتج، لا نضيفه للـ orderItems
+            if (!product) return null;
+
             return {
               ...item,
-              productName: product ? product.name : "Unknown Product" // إضافة اسم المنتج
+              productName: product.name,
+              productImage: product.image,
+              productprice: product.price,
+              quantity: item.quantity
             };
-          });
+          })
+          .filter(item => item !== null); // حذف العناصر اللي ما إلها منتج
 
-        console.log("Order Items:", this.orderItems);
+        console.log("Final Order Items:", this.orderItems);
       });
     });
   }
+
 }

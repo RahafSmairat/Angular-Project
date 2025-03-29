@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ShopService } from '../../Services/shop.service';
 import Swal from 'sweetalert2';
+import { Router } from '@angular/router';
 
 export interface Product {
   id: number;
@@ -31,7 +32,7 @@ export class ShopeComponent implements OnInit {
   reviews: any[] = [];
   searchQuery: string = '';
 
-  constructor(private _ser: ShopService) { }
+  constructor(private _ser: ShopService, private router: Router) { }
 
   ngOnInit() {
     this.fetchCategories();
@@ -222,4 +223,57 @@ export class ShopeComponent implements OnInit {
         break;
     }
   }
+
+
+  //////////////////////////////////////////////////////////
+
+  cart: any;
+
+  addToCart(product: any) {
+    this._ser.getAllCart().subscribe(cartData => {
+      this.cart = cartData.find(c => c.userId == 1); // البحث عن عربة المستخدم
+
+      if (this.cart) {
+        const cartData = {
+          productId: product.id,
+          productName: product.name,
+          productPrice: product.price,
+          quantity: 1, // إضافة كمية واحدة افتراضيًا
+          cartId: this.cart.id,
+          imageUrl: product.image
+        };
+
+        this._ser.postToCartItems(cartData).subscribe((response) => {
+          console.log('✅ Product added to cart:', response);
+          this.router.navigate(['/cart'], { queryParams: { productId: product.id } });
+        });
+      } else {
+        console.error("❌ Cart not found for user. Creating a new cart...");
+
+        // إنشاء عربة جديدة للمستخدم
+        const newCart = { userId: 1 };
+
+        this._ser.postToCart(newCart).subscribe((newCartResponse: any) => {
+          this.cart = newCartResponse;
+
+          const cartData = {
+            productId: product.id,
+            productName: product.name,
+            productPrice: product.price,
+            quantity: 1,
+            cartId: this.cart.id,
+            imageUrl: product.image
+          };
+
+          // بعد إنشاء العربة، أضف المنتج إليها
+          this._ser.postToCartItems(cartData).subscribe((response) => {
+            console.log('✅ Product added to new cart:', response);
+            this.router.navigate(['/cart'], { queryParams: { productId: product.id } });
+          });
+        });
+      }
+    });
+  }
+
+  ////////////////////////////////////////////////////////////////////////////////////
 }

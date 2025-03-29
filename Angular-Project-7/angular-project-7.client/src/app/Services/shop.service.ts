@@ -200,4 +200,16 @@ export class ShopService {
   sendReply(email: string, message: string) {
     return this.http.post(`${this.contactUS}/send-reply`, { email, message });
   }
+
+  /////////////////////////////////////////////////Checkout
+
+  private cartItems: any[] = []; 
+
+  setCartItems(items: any[]) {
+    this.cartItems = items;
+  }
+
+  getCartItems() {
+    return this.cartItems;
+  }
 }
