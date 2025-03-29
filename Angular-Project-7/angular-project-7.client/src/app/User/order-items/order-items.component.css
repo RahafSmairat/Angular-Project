@@ -1,9 +1,8 @@
-/* تحسين الجدول ليظهر بشكل مرتب */
 .custom-table {
   margin: 20px auto;
-  width: 80%; /* تحديد عرض الجدول */
-  border-collapse: collapse; /* تحسين تداخل الحدود */
-  max-width: 1200px; /* تحديد أقصى عرض للجدول */
+  width: 80%;
+  border-collapse: collapse;
+  max-width: 1200px;
 }
 
   .custom-table th, .custom-table td {
@@ -30,7 +29,7 @@
 }
 
   .product-name a:hover {
-    color: #007bff; /* لون النص عند المرور */
+    color: #007bff;
   }
 
 .pro-qty input {
@@ -46,18 +45,17 @@
   color: #333;
 }
 
-/* جعل الجدول قابل للتكيف مع الشاشات الصغيرة */
 @media (max-width: 768px) {
   .custom-table {
-    width: 100%; /* جعل الجدول يعرض 100% من العرض في الشاشات الصغيرة */
+    width: 100%;
     font-size: 14px;
   }
 
   .product-thumbnail img {
-    width: 50px; /* تصغير حجم الصورة في الشاشات الصغيرة */
+    width: 50px;
   }
 
   .pro-qty input {
-    width: 40px; /* تقليص عرض مدخل الكمية في الشاشات الصغيرة */
+    width: 40px;
   }
 }

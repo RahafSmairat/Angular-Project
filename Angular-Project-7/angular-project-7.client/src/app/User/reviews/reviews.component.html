@@ -25,19 +25,17 @@
             <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
                  alt="User Avatar" class="review-avatar">
             <div class="review-info ml-3">
-              <!--<span class="review-author">{{ getUserName(review.userId) }}</span>-->
               <span class="review-author">{{ review.name }}</span>
               <span class="review-date">{{ review.createdAt | date:'short' }}</span>
             </div>
           </div>
 
-          <!-- أيقونات التعديل والحذف -->
           <div class="review-actions d-flex " style="gap:8px" *ngIf="isUserReview(review.userId)">
             <i class="fas fa-pencil-alt" style="color: #e7a895;" (click)="editReview(review)"></i>
             <i class="fas fa-trash-alt delete-icon" (click)="deleteReview(review.id)"></i>
-           
+
           </div>
-          </div>
+        </div>
 
         <div class="review-rating">
           <i class="fas fa-star" *ngFor="let star of [].constructor(review.rating); let i = index"></i>
@@ -65,4 +63,5 @@
 
     </div>
 
-
+  </div>
+</div>

@@ -1,14 +1,14 @@
 .page-header-area {
-  padding-top: 100px !important; /* زيادة المسافة من الأعلى */
-  padding-bottom: 9px; /* الحفاظ على المسافة من الأسفل كما هي */
+  padding-top: 100px !important;
+  padding-bottom: 9px;
 }
 
 body {
-  background-color: #e7a895 !important; /* جعل اللون الأساسي كخلفية */
+  background-color: #e7a895 !important;
 }
 
 .reviews-section {
-  background-color: #fff; /* لجعل قسم التقييمات بارزًا */
+  background-color: #fff;
   padding: 40px 0;
 }
 
@@ -69,7 +69,7 @@ body {
   height: 40px;
   border-radius: 50%;
   object-fit: cover;
-  background-color: #ddd; /* لون خلفية في حالة عدم وجود صورة */
+  background-color: #ddd;
 }
 
 .review-info {
@@ -127,7 +127,6 @@ textarea {
   font-size: 28px;
 }
 
-/* زر رئيسي بتصميم متناسق مع اللون الأساسي */
 .btn-primary {
   background-color: #e7a895;
   border: none;
@@ -141,18 +140,17 @@ textarea {
   .btn-primary:hover {
     background-color: #d98a79;
   }
+
 .delete-icon {
-  color: #9E9E9E !important; /* لون رمادي متوسط */
+  color: #9E9E9E !important;
   font-size: 20px;
   transition: color 0.3s, transform 0.2s;
 }
 
   .delete-icon:hover {
-    color: #616161!important; /* لون رمادي داكن عند التحويل */
+    color: #616161 !important;
     transform: scale(1.2);
   }
-
-/**/
 
 .fas, .far {
   font-size: 30px;

@@ -6,17 +6,11 @@ body {
 }
 
 .page-header-title {
-  color: #FF948A;
+  color: #000;
   font-size: 28px;
   font-weight: bold;
-}
-
-.table {
-  width: 100%;
-  border-collapse: collapse;
-  background: white;
-  border-radius: 10px;
-  overflow: hidden;
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
   .table th, .table td {
@@ -26,8 +20,6 @@ body {
   }
 
   .table th {
-    background-color: #FF948A;
-    color: white;
     font-weight: bold;
   }
 
@@ -50,16 +42,17 @@ body {
 }
 
 .quantity-btn {
-  background-color: #FF948A;
-  color: white;
+  background-color: transparent;
+  color: black;
   border: none;
   padding: 5px 10px;
   cursor: pointer;
   border-radius: 5px;
+  transition:none;
 }
 
   .quantity-btn:hover {
-    background-color: #ff7a6d;
+    color: #ff6565
   }
 
 .cart-totals-wrap {
@@ -70,27 +63,11 @@ body {
 }
 
   .cart-totals-wrap h2 {
-    color: #FF948A;
     margin-bottom: 15px;
   }
 
   .cart-totals-wrap table {
     width: 100%;
-  }
-
-.checkout-button {
-  background-color: #FF948A;
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 5px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-  .checkout-button:hover {
-    background-color: #ff7a6d;
   }
 
 .coupon-wrap {
@@ -101,17 +78,36 @@ body {
 }
 
 .btn-coupon {
-  background-color: #FF948A;
-  color: white;
-  border: none;
-  padding: 10px 15px;
-  border-radius: 5px;
+  background: #ff6565;
+  border: 2px solid #ff6565;
+  box-shadow: none;
+  color: #fff;
   cursor: pointer;
-  transition: 0.3s;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 500;
+  height: 50px;
+  letter-spacing: 0;
+  line-height: 46px;
+  outline: none;
+  overflow: hidden;
+  padding: 0 35px;
+  text-shadow: none;
+  text-transform: uppercase;
+  vertical-align: middle;
+  white-space: nowrap;
+  border-radius: 4px;
+  transition: all .3s ease-out;
+  -webkit-transition: all .3s ease-out;
+  -moz-transition: all .3s ease-out;
+  -ms-transition: all .3s ease-out;
+  -o-transition: all .3s ease-out
 }
 
   .btn-coupon:hover {
-    background-color: #ff7a6d;
+    background: #000;
+    border-color: #000;
+    color: #fff
   }
 
 

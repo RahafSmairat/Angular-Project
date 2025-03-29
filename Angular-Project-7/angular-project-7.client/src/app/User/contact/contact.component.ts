@@ -19,7 +19,7 @@ export class ContactComponent {
     this._ser.postMessages(formData).subscribe(
       () => {
         this.successMessage = 'Your message has been sent successfully!';
-        this.errorMessage = ''; // Clear any previous error message
+        this.errorMessage = ''; 
         Swal.fire({
           title: 'Success!',
           text: this.successMessage,
@@ -29,7 +29,7 @@ export class ContactComponent {
       },
       () => {
         this.errorMessage = 'There was an issue sending your message. Please try again.';
-        this.successMessage = ''; // Clear any previous success message
+        this.successMessage = ''; 
         Swal.fire({
           title: 'Error!',
           text: this.errorMessage,

@@ -73,35 +73,17 @@ export class ProfileComponent {
   }
 
   getOrderrItems() {
-    console.log("getOrderrItems() called!"); // تأكيد إنه الميثود نادت
+    console.log("getOrderrItems() called!"); 
 
     this.Order = this.Activep.snapshot.paramMap.get('id');
-    console.log("Order ID from route:", this.Order); // تأكيد إنه في ID
-
+    console.log("Order ID from route:", this.Order); 
     this.ser.getAllOrderItems().subscribe((data) => {
-      console.log("All Order Items:", data); // تأكيد إنه API رجّع بيانات
+      console.log("All Order Items:", data); 
 
       this.orderItems = data.filter((Products: any) => Products.orderId == this.Order);
-      console.log("Filtered Order Items:", this.orderItems); // تأكيد الفلترة
+      console.log("Filtered Order Items:", this.orderItems); 
     });
   }
-
-  //selectedPaymentType: any;
-  //addPayment(data: any) {
-
-  //  const payment = { userId: this.userData.id, type: data.type.value, cardNumber: data.cardNumber, expiryDate: data.expiryDate }
-  //  this._ser.postToPayments(payment).subscribe(() => {
-  //    Swal.fire({
-  //      title: 'Payment Method Was Added!',
-  //      text: 'The Payment Method has been successfully added.',
-  //      icon: 'success',
-  //      confirmButtonText: 'OK',
-  //      color: '#5a2a2a',
-  //      confirmButtonColor: '#ff6565',
-  //    });
-  //  })
-  //}
-
   paymentData = {
     type: '',
     cardNumber: '',
@@ -112,14 +94,15 @@ export class ProfileComponent {
 
   submitPayment(form: any) {
     this.paymentData.userId = this.userData.id
-      this._ser.postToPayments(this.paymentData).subscribe(() => {
-        Swal.fire({
-                title: 'Payment Method Was Added!',
-                text: 'The Payment Method has been successfully added.',
-                icon: 'success',
-                confirmButtonText: 'OK',
-                color: '#5a2a2a',
-                confirmButtonColor: '#ff6565',
-      });        })
+    this._ser.postToPayments(this.paymentData).subscribe(() => {
+      Swal.fire({
+        title: 'Payment Method Was Added!',
+        text: 'The Payment Method has been successfully added.',
+        icon: 'success',
+        confirmButtonText: 'OK',
+        color: '#5a2a2a',
+        confirmButtonColor: '#ff6565',
+      });
+    })
   }
 }

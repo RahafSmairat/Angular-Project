@@ -48,9 +48,11 @@
                   </td>
                   <td class="product-quantity">
                     <div class="pro-qty">
-                      <button class="quantity-btn" (click)="updateQuantity(item, item.quantity + 1)">&#x2191;</button>
+                      <button class="quantity-btn" (click)="updateQuantity(item, item.quantity - 1)">
+                        <i class="fa-solid fa-minus"></i>
+                      </button>
                       <input type="text" title="Quantity" [value]="item.quantity" readonly>
-                      <button class="quantity-btn" (click)="updateQuantity(item, item.quantity - 1)">&#x2193;</button>
+                      <button class="quantity-btn" (click)="updateQuantity(item, item.quantity + 1)"><i class="fa-solid fa-plus"></i></button>
                     </div>
                   </td>
                   <td class="product-subtotal">

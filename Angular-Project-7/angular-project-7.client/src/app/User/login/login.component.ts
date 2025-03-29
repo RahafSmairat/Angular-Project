@@ -30,7 +30,6 @@ export class LoginComponent {
           this.route.navigate([''])
 
           this.ser.postUserData(userData).subscribe(() => {///////////////////////////////////////
-            //alert("Logged in successfully!");
           })
         })
       }

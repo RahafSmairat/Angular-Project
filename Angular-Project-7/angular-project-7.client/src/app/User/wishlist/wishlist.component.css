@@ -4,10 +4,9 @@ body {
 }
 
 .wishlist-container {
-  margin: 30px 0;
+  margin: 10px 0;
   padding: 20px;
   border-radius: 12px;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   background-color: #fff;
 }
 .page-header-area {
@@ -21,10 +20,13 @@ body {
   margin-bottom: 30px;
 }
 
-  .wishlist-header h2 {
-    font-size: 2rem;
-    color: #e7a895;
-  }
+h2 {
+  color: #000;
+  font-size: 28px;
+  font-weight: bold !important;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
 
 .wishlist-item {
   display: flex;
@@ -57,12 +59,12 @@ body {
 
 .wishlist-item-price {
   font-size: 1.1rem;
-  color: #e7a895;
+  color: #FF948A;
   margin-top: 5px;
 }
 
 .remove-btn {
-  background-color: #e7a895;
+  background-color: #FF948A;
   border: none;
   padding: 8px 12px;
   color: white;

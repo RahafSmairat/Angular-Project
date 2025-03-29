@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { ShopService } from '../../Services/shop.service';
 import { HttpClient } from '@angular/common/http';
+import Swal from 'sweetalert2';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-checkout',
@@ -13,7 +15,7 @@ export class CheckoutComponent {
   paymentMethodId: number = 1;
   totalAmount: number = 0;
 
-  constructor(private shopService: ShopService, private http: HttpClient) {}
+  constructor(private shopService: ShopService, private http: HttpClient, private route: Router) { }
 
   ngOnInit(): void {
     this.cartItems = this.shopService.getCartItems();
@@ -49,6 +51,15 @@ export class CheckoutComponent {
       (orderResponse: any) => {
         console.log('Order Created:', orderResponse);
         this.addOrderItems(orderResponse.id);
+        Swal.fire({
+          title: 'Order Was Placed!',
+          text: 'Your order was placed successfully.',
+          icon: 'success',
+          confirmButtonText: 'OK',
+          color: '#5a2a2a',
+          confirmButtonColor: '#ff6565',
+        });
+        this.route.navigate(['/profile']);
       },
       (error) => console.error('Error creating order:', error)
     );

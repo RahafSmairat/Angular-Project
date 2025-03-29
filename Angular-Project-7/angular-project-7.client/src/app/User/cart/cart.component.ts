@@ -43,8 +43,8 @@ export class CartComponent {
           };
         });
         this.calculateTotal();
-      }, error => console.error('خطأ في جلب المنتجات:', error));
-    }, error => console.error('خطأ في جلب بيانات السلة:', error));
+      })
+    })
   }
 
   removeFromCart(id: any) {
@@ -103,9 +103,6 @@ export class CartComponent {
           this.errorMessage = '  The voucher code is incorrect  🎟️ ';
           this.appliedVoucher = null;
         }
-      },
-      (error) => {
-        console.error('خطأ في جلب القسائم:', error);
       }
     );
   }

@@ -53,8 +53,6 @@ export class OrderItemsComponent {
       this.Orders = data;
     })
   }
-
-
   getOrderrItems() {
     this.Order = this.Activep.snapshot.paramMap.get('id');
 
@@ -62,11 +60,10 @@ export class OrderItemsComponent {
       this._ser.getAllProducts().subscribe((productsData) => {
 
         this.orderItems = orderItemsData
-          .filter((item: any) => item.orderId == this.Order) // فلترة الطلبات حسب orderId
+          .filter((item: any) => item.orderId == this.Order) 
           .map((item: any) => {
-            let product = productsData.find((p: any) => p.id == item.productId); // البحث عن المنتج
+            let product = productsData.find((p: any) => p.id == item.productId); 
 
-            // إذا لم يجد المنتج، لا نضيفه للـ orderItems
             if (!product) return null;
 
             return {
@@ -77,7 +74,7 @@ export class OrderItemsComponent {
               quantity: item.quantity
             };
           })
-          .filter(item => item !== null); // حذف العناصر اللي ما إلها منتج
+          .filter(item => item !== null); 
 
         console.log("Final Order Items:", this.orderItems);
       });
