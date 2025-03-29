@@ -9,7 +9,7 @@ import { Route, Router } from '@angular/router';
 })
 export class NavbarComponent {
 
-  isLogged: boolean = false;
+  isLogged: any;
 
   constructor(private ser: UserService, private route: Router) { }
 

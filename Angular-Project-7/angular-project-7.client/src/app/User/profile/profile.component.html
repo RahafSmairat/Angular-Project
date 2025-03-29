@@ -38,7 +38,7 @@
                 <div class="myaccount-content">
                   <h3>Dashboard</h3>
                   <div class="welcome">
-                    <p>Hello, <strong>Alex Tuntuni</strong> (If Not <strong>Tuntuni !</strong><a href="account-login.html" class="logout"> Logout</a>)</p>
+                    <p>Hello, <strong>{{ userData.name }} 🎀♥️</strong></p>
                   </div>
                   <p>From your account dashboard. you can easily check & view your recent orders, manage your shipping and billing addresses and edit your password and account details.</p>
                 </div>
@@ -52,33 +52,20 @@
                         <tr>
                           <th>Order</th>
                           <th>Date</th>
-                          <th>Status</th>
-                          <th>Total</th>
+                          <th>Quantity</th>
+                          <th>Count</th>
                           <th>Action</th>
                         </tr>
                       </thead>
-                      <tbody>
+                      <tbody *ngFor="let item of UserOrderss">
                         <tr>
-                          <td>1</td>
-                          <td>Aug 22, 2018</td>
-                          <td>Pending</td>
-                          <td>$3000</td>
-                          <td><a href="shop-cart.html" class="check-btn sqr-btn ">View</a></td>
+                          <td>{{item.id}}</td>
+                          <td>{{item.createdAt}}</td>
+                          <td>{{item.paymentMethodId}}</td>
+                          <td>{{item.totalAmount}}</td>
+                          <td><a routerLink="/order-items/{{item.id}}" class="check-btn sqr-btn ">View Items</a></td>
                         </tr>
-                        <tr>
-                          <td>2</td>
-                          <td>July 22, 2018</td>
-                          <td>Approved</td>
-                          <td>$200</td>
-                          <td><a href="shop-cart.html" class="check-btn sqr-btn ">View</a></td>
-                        </tr>
-                        <tr>
-                          <td>3</td>
-                          <td>June 12, 2017</td>
-                          <td>On Hold</td>
-                          <td>$990</td>
-                          <td><a href="shop-cart.html" class="check-btn sqr-btn ">View</a></td>
-                        </tr>
+
                       </tbody>
                     </table>
                   </div>
@@ -135,6 +122,7 @@
                   <a href="#/" class="check-btn sqr-btn"><i class="fa fa-edit"></i> Edit Address</a>
                 </div>
               </div>
+              <!--=======================Account Details==========================================-->
               <div class="tab-pane fade" id="account-info" role="tabpanel" aria-labelledby="account-info-tab">
                 <div class="myaccount-content">
                   <h3>Account Details</h3>
@@ -143,25 +131,37 @@
                       <div class="row">
                         <div class="col-lg-6">
                           <div class="single-input-item">
-                            <label for="first-name" class="required">First Name</label>
-                            <input type="text" id="first-name" />
-                          </div>
-                        </div>
-                        <div class="col-lg-6">
-                          <div class="single-input-item">
-                            <label for="last-name" class="required">Last Name</label>
-                            <input type="text" id="last-name" />
+                            <label for="first-name" class="required">Full Name</label>
+                            <!--<input type="text" id="first-name" />-->
+                            <p class="text-muted">{{ userData.name }}</p>
+
                           </div>
                         </div>
                       </div>
                       <div class="single-input-item">
-                        <label for="display-name" class="required">Display Name</label>
-                        <input type="text" id="display-name" />
+                        <label for="phone" class="required">Phone Number</label>
+                        <!--<input type="text" id="display-name" />-->
+                        <p class="text-muted">{{ userData.phone }}</p>
+
                       </div>
                       <div class="single-input-item">
                         <label for="email" class="required">Email Addres</label>
-                        <input type="email" id="email" />
+                        <!--<input type="email" id="email" />-->
+                        <p class="text-muted">{{ userData.email }}</p>
+
+                        <div class="single-input-item">
+                          <button class="check-btn sqr-btn">
+                            <a (click)="edit()">
+                              Edit Profile
+                              <i class="far fa-edit mb-5"></i>
+                            </a>
+                          </button>
+                        </div>
                       </div>
+                      <app-edit-profile *ngIf="show"
+                                        [userParent]="userData"
+                                        (userChild)="updateUser($event)">
+                      </app-edit-profile>
                       <fieldset>
                         <legend>Password change</legend>
                         <div class="single-input-item">

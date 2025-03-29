@@ -17,6 +17,7 @@ export class IndexComponent {
   ngOnInit() {
     this.getTopCategories()
     this.getProductsOnSale()
+    this.getTopRated()
   }
 
   getTopCategories() {
@@ -37,5 +38,34 @@ export class IndexComponent {
 
   extractDiscount(discount: string): number {
     return parseInt(discount.replace('%', '')) || 0; 
+  }
+
+
+  ////Display Top Rated Products
+  topRatedProducts: any[] = [];
+
+  getTopRated() {
+    this.ser.getTopRatedProducts().subscribe(products => {
+      this.topRatedProducts = products;
+      console.log(this.topRatedProducts)
+    });
+  }
+
+  generateStars(rating: number): string {
+    const fullStars = Math.floor(rating);
+    const emptyStars = 5 - fullStars;
+
+    return (
+      '★'.repeat(fullStars) +
+      '☆'.repeat(emptyStars)
+    );
+  }
+
+  calculateOldPrice(price: number, discount: string): string {
+    const discountValue = parseFloat(discount);
+    if (!isNaN(discountValue) && discountValue > 0) {
+      return (price / (1 - discountValue / 100)).toFixed(2);
+    }
+    return price.toFixed(2);
   }
 }

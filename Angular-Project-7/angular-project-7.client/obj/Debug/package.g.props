@@ -24,6 +24,8 @@
     <PackageJsonDependenciesJquery Condition="$(PackageJsonDependenciesJquery) == ''">^3.7.1</PackageJsonDependenciesJquery>
     <PackageJsonDependenciesRunScriptOs Condition="$(PackageJsonDependenciesRunScriptOs) == ''">*</PackageJsonDependenciesRunScriptOs>
     <PackageJsonDependenciesRxjs Condition="$(PackageJsonDependenciesRxjs) == ''">~7.8.0</PackageJsonDependenciesRxjs>
+    <PackageJsonDependenciesSweetalert2 Condition="$(PackageJsonDependenciesSweetalert2) == ''">^11.17.2</PackageJsonDependenciesSweetalert2>
+    <PackageJsonDependenciesSwiper Condition="$(PackageJsonDependenciesSwiper) == ''">^11.2.6</PackageJsonDependenciesSwiper>
     <PackageJsonDependenciesTslib Condition="$(PackageJsonDependenciesTslib) == ''">^2.3.0</PackageJsonDependenciesTslib>
     <PackageJsonDependenciesZoneJs Condition="$(PackageJsonDependenciesZoneJs) == ''">~0.14.10</PackageJsonDependenciesZoneJs>
     <PackageJsonDevdependenciesAngularDevkitBuildAngular Condition="$(PackageJsonDevdependenciesAngularDevkitBuildAngular) == ''">^18.2.6</PackageJsonDevdependenciesAngularDevkitBuildAngular>

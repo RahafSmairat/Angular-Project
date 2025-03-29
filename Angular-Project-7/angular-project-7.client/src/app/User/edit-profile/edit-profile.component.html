@@ -1,1 +1,19 @@
-<p>edit-profile works!</p>
+<div class="modal-backdrop">
+  <div class="modal-content">
+    <h3>Edit Profile</h3>
+    <form>
+      <div style="text-align:left !important ;margin-top:20px">
+        <label>Username:</label>
+        <input type="text" [(ngModel)]="user.name" class="form-control" name="name" />
+      </div>
+
+      <div style="text-align:left !important; margin-bottom:20px">
+        <label>Email:</label>
+        <input type="email" [(ngModel)]="user.email" class="form-control" name="email" />
+      </div>
+
+      <button type="button" class="btn btn-primary btn-lg btn-block" (click)="save()">Save</button>
+      <button type="button" class="btn btn-primary btn-lg btn-block" (click)="cancel()">Cancel</button>
+    </form>
+  </div>
+</div>

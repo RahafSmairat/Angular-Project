@@ -19,11 +19,19 @@ export class LoginComponent {
     }
     this.ser.getAllUsers().subscribe(data => {
       let user = data.find((u: any) => u.email == userData.email && u.password == userData.password)
+      if (user.email == "admin@gmail.com" && user.password == '123') {
+        this.route.navigate(['/dashboard'])
+        return
+      }
       if (user) {
-        const email = {email : user.email}
-        this.ser.LogIn(email).subscribe(() => {
-          this.ser.loggedInUser.next(email);
+        const loggedUser = {email : user.email, id: user.id, name: user.fullName, phone:user.phone}
+        this.ser.LogIn(loggedUser).subscribe(() => {
+          this.ser.loggedInUser.next(loggedUser);
           this.route.navigate([''])
+
+          this.ser.postUserData(userData).subscribe(() => {///////////////////////////////////////
+            //alert("Logged in successfully!");
+          })
         })
       }
       else {

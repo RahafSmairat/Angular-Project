@@ -1,4 +1,11 @@
-
+<a *ngIf="isHomePage && highestDiscountVoucher" class="banner-link" routerLink="/cart">
+  <div class="gigaparts-sale-banner">
+    <h1 class="animated pulse">
+      Celebrate <span style="font-weight: bold;">Eid</span> with us! Enjoy an exclusive ✨ {{highestDiscountVoucher.discountPercentage}}% OFF ✨ on all products!
+      Use code: {{highestDiscountVoucher.code}} at checkout.
+    </h1>
+  </div>
+</a>
 <div *ngIf="showLayout">
   <app-navbar></app-navbar>
 </div>

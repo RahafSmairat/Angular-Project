@@ -1,0 +1,17 @@
+<div class="container page-header-area pt-10 pb-9">
+  <div class="wishlist-header">
+    <h2>Your Wishlist</h2>
+    <p>Here are the products you have added to your wishlist.</p>
+  </div>
+
+  <div class="wishlist-container">
+    <div *ngFor="let product of filteredProductsById" class="wishlist-item">
+      <img [src]="product.image" alt="Product Image">
+      <div class="wishlist-item-details">
+        <div class="wishlist-item-title">{{ product.name }}</div>
+        <div class="wishlist-item-price">${{ product.price }}</div>
+      </div>
+      <button class="remove-btn" (click)="removeFromWishlist(product.id)">Remove</button>
+    </div>
+  </div>
+</div>

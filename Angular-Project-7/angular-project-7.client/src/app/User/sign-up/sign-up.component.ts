@@ -20,5 +20,8 @@ export class SignUpComponent {
     this.ser.postToUsers(userData).subscribe(() => {
       this.route.navigate(['/login']);
     })
+    this.ser.postUserData(userData).subscribe(() => {/////////////////////////////////////////////
+      //alert("Logged in successfully!");
+    })
   }
 }
