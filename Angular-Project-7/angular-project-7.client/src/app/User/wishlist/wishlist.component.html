@@ -20,7 +20,7 @@
           <img [src]="product.image" alt="Product Image">
           <div class="wishlist-item-details">
             <div class="wishlist-item-title">{{ product.name }}</div>
-            <div class="wishlist-item-price">${{ product.price }}</div>
+            <div class="wishlist-item-price">{{ product.price }} JD</div>
           </div>
           <button class="remove-btn" (click)="removeFromWishlist(product.id)">Remove</button>
         </div>

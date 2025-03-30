@@ -40,20 +40,25 @@ h3 {
 
 .modal-footer {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   margin-top: 20px;
 }
 
 .btn-save {
-  background-color: #4CAF50; 
+  border: none;
+  background-color: #364958;
   color: white;
+  border-radius: 2px;
 }
 
 .btn-cancel {
-  background-color: #f44336; 
+  background-color: #ff6565;
   color: white;
+  border: none;
+  border-radius: 2px;
 }
 
   .btn-save:hover, .btn-cancel:hover {
     opacity: 0.9;
+    border: none;
   }

@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { forkJoin, map } from 'rxjs';
+import { forkJoin, map, Observable, of } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -209,7 +209,7 @@ export class ShopService {
     this.cartItems = items;
   }
 
-  getCartItems() {
-    return this.cartItems;
+  getCartItems(): Observable<any[]> {
+    return of(this.cartItems);
   }
 }

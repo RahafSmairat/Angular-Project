@@ -44,7 +44,7 @@
                   </td>
                   <td class="product-name">{{ item.productName }} </td>
                   <td class="product-price">
-                    <span class="price">{{item.productPrice}} JD</span>
+                    <span class="price">{{item.productPrice | number: '1.2-2'}} JD</span>
                   </td>
                   <td class="product-quantity">
                     <div class="pro-qty">
@@ -56,7 +56,7 @@
                     </div>
                   </td>
                   <td class="product-subtotal">
-                    <span class="price">{{ item.productPrice * item.quantity }} JD</span>
+                    <span class="price">{{ item.productPrice * item.quantity | number: '1.2-2' }} JD</span>
                   </td>
                 </tr>
               </tbody>
@@ -90,7 +90,7 @@
                 <tbody>
                   <tr class="cart-subtotal">
                     <th>Subtotal</th>
-                    <td><span class="amount">{{ totalPrice }} JD</span></td>
+                    <td><span class="amount">{{ totalPrice | number: '1.2-2'}} JD</span></td>
                   </tr>
                   <tr class="shipping-totals">
                     <th>Shipping Fee</th>

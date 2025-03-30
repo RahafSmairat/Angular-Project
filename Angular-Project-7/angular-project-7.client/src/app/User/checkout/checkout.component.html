@@ -129,14 +129,16 @@
                     </tr>
                   </thead>
                   <tbody class="table-body">
-                    <tr class="cart-item">
-                      <td class="product-name">Satin gown <span class="product-quantity">× 1</span></td>
-                      <td class="product-total">69.99 JD</td>
+                    <tr class="cart-item" *ngFor="let item of cartItems">
+                      <td class="product-name">
+                        {{item.productName}} <span class="product-quantity">{{item.quantity}}</span>
+                      </td>
+                      <td class="product-total">{{item.productPrice}}</td>
                     </tr>
-                    <tr class="cart-item">
+                    <!--<tr class="cart-item">
                       <td class="product-name">Printed cotton t-shirt <span class="product-quantity">× 1</span></td>
                       <td class="product-total">20.00 JD</td>
-                    </tr>
+                    </tr>-->
                   </tbody>
                   <tfoot class="table-foot">
                     <tr class="cart-subtotal">
@@ -173,7 +175,7 @@
                       <label for="privacy" class="custom-control-label">I have read and agree to the website terms and conditions <span class="required">*</span></label>
                     </div>
                   </div>
-                    <a class="btn-place-order" (click)="placeOrder()">Place order</a>
+                  <a class="btn-place-order" (click)="placeOrder()">Place order</a>
                 </div>
               </div>
             </div>

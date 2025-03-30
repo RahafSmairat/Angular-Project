@@ -105,7 +105,6 @@ export class ShopeComponent implements OnInit {
 
         Swal.fire({
           title: 'Product added to wishlist!',
-          text: 'Your item is now in the wishlist.',
           icon: 'success',
           imageUrl: product.image,
           imageWidth: 100,
@@ -113,6 +112,7 @@ export class ShopeComponent implements OnInit {
           imageAlt: 'Product Image',
           confirmButtonText: 'Got it!',
           reverseButtons: true,
+          confirmButtonColor: '#ff6565',
         }).then((result) => {
           if (result.isConfirmed) {
             window.location.href = '/wishlist';
@@ -231,14 +231,14 @@ export class ShopeComponent implements OnInit {
 
   addToCart(product: any) {
     this._ser.getAllCart().subscribe(cartData => {
-      this.cart = cartData.find(c => c.userId == 1); // البحث عن عربة المستخدم
+      this.cart = cartData.find(c => c.userId == 1); 
 
       if (this.cart) {
         const cartData = {
           productId: product.id,
           productName: product.name,
           productPrice: product.price,
-          quantity: 1, // إضافة كمية واحدة افتراضيًا
+          quantity: 1, 
           cartId: this.cart.id,
           imageUrl: product.image
         };
@@ -250,7 +250,6 @@ export class ShopeComponent implements OnInit {
       } else {
         console.error("❌ Cart not found for user. Creating a new cart...");
 
-        // إنشاء عربة جديدة للمستخدم
         const newCart = { userId: 1 };
 
         this._ser.postToCart(newCart).subscribe((newCartResponse: any) => {
@@ -265,7 +264,6 @@ export class ShopeComponent implements OnInit {
             imageUrl: product.image
           };
 
-          // بعد إنشاء العربة، أضف المنتج إليها
           this._ser.postToCartItems(cartData).subscribe((response) => {
             console.log('✅ Product added to new cart:', response);
             this.router.navigate(['/cart'], { queryParams: { productId: product.id } });

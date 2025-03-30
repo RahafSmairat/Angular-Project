@@ -84,9 +84,9 @@
                     <table class="table table-bordered">
                       <thead class="thead-light">
                         <tr>
-                          <th>Order</th>
-                          <th>Date</th>
-                          <th>Count</th>
+                          <th>Order ID</th>
+                          <th>Placed In</th>
+                          <th>Total</th>
                           <th>Action</th>
                         </tr>
                       </thead>
@@ -190,10 +190,10 @@
                 <div class="myaccount-content">
                   <h3>Billing Address</h3>
                   <address>
-                    <p><strong>Alex Tuntuni</strong></p>
+                    <p><strong>{{ userData.name }}</strong></p>
                     <p>
-                      1355 Market St, Suite 900 <br>
-                      San Francisco, CA 94103
+                      Al-Sheikh Khalil St., Irbid <br>
+                      Jordan.
                     </p>
                     <p>Mobile: {{ userData.phone }}</p>
                   </address>

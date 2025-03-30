@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { ChangeDetectorRef, Component } from '@angular/core';
 import { ShopService } from '../../Services/shop.service';
 import { HttpClient } from '@angular/common/http';
 import Swal from 'sweetalert2';
@@ -18,7 +18,13 @@ export class CheckoutComponent {
   constructor(private shopService: ShopService, private http: HttpClient, private route: Router) { }
 
   ngOnInit(): void {
-    this.cartItems = this.shopService.getCartItems();
+    //this.cartItems = this.shopService.getCartItems();
+    this.shopService.getCartItems().subscribe(
+      (items) => {
+        this.cartItems = items;
+        console.log('Cart Items:', this.cartItems);
+      }
+    );
     console.log(this.cartItems)
     this.totalAmount = this.cartItems.reduce((sum, item) => sum + (item.productPrice * item.quantity), 0);
     this.getLoggedInUser();
