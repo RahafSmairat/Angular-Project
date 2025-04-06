@@ -141,19 +141,6 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "view-product.component.spec.ts",
-              "DocumentMoniker": "C:\\Users\\Orange\\source\\repos\\Angular-Project\\Angular-Project-7\\angular-project-7.client\\src\\app\\Admin\\Product\\view-product\\view-product.component.spec.ts",
-              "RelativeDocumentMoniker": "angular-project-7.client\\src\\app\\Admin\\Product\\view-product\\view-product.component.spec.ts",
-              "ToolTip": "C:\\Users\\Orange\\source\\repos\\Angular-Project\\Angular-Project-7\\angular-project-7.client\\src\\app\\Admin\\Product\\view-product\\view-product.component.spec.ts",
-              "RelativeToolTip": "angular-project-7.client\\src\\app\\Admin\\Product\\view-product\\view-product.component.spec.ts",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2025-04-06T10:10:44.226Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 3,
               "Title": "view-product.component.html",
               "DocumentMoniker": "C:\\Users\\Orange\\source\\repos\\Angular-Project\\Angular-Project-7\\angular-project-7.client\\src\\app\\Admin\\Product\\view-product\\view-product.component.html",
@@ -163,6 +150,23 @@
               "ViewState": "AgIAAB8AAAAAAAAAAAAmwEYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
               "WhenOpened": "2025-04-06T10:10:31.295Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "view-product.component.spec.ts",
+              "DocumentMoniker": "C:\\Users\\Orange\\source\\repos\\Angular-Project\\Angular-Project-7\\angular-project-7.client\\src\\app\\Admin\\Product\\view-product\\view-product.component.spec.ts",
+              "RelativeDocumentMoniker": "angular-project-7.client\\src\\app\\Admin\\Product\\view-product\\view-product.component.spec.ts",
+              "ToolTip": "C:\\Users\\Orange\\source\\repos\\Angular-Project\\Angular-Project-7\\angular-project-7.client\\src\\app\\Admin\\Product\\view-product\\view-product.component.spec.ts",
+              "RelativeToolTip": "angular-project-7.client\\src\\app\\Admin\\Product\\view-product\\view-product.component.spec.ts",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-04-06T10:10:44.226Z",
               "EditorCaption": ""
             },
             {
@@ -329,10 +333,6 @@
               "ViewState": "AgIAAA8AAAAAAAAAAAAAABEAAABfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
               "WhenOpened": "2025-03-29T23:32:51.255Z"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
             },
             {
               "$type": "Document",

@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "C:\\Users\\Orange\\source\\repos\\Angular-Project\\Angular-Project-7\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{8075D0B9-E74D-50BA-3C42-CF8594709BCF}|angular-project-7.client\\angular-project-7.client.esproj|c:\\users\\orange\\source\\repos\\angular-project\\angular-project-7\\angular-project-7.client\\src\\app\\admin\\voucher\\viewvoucher\\viewvoucher.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{8075D0B9-E74D-50BA-3C42-CF8594709BCF}|angular-project-7.client\\angular-project-7.client.esproj|solutionrelative:angular-project-7.client\\src\\app\\admin\\voucher\\viewvoucher\\viewvoucher.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8075D0B9-E74D-50BA-3C42-CF8594709BCF}|angular-project-7.client\\angular-project-7.client.esproj|c:\\users\\orange\\source\\repos\\angular-project\\angular-project-7\\angular-project-7.client\\src\\app\\admin\\voucher\\viewvoucher\\viewvoucher.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8075D0B9-E74D-50BA-3C42-CF8594709BCF}|angular-project-7.client\\angular-project-7.client.esproj|solutionrelative:angular-project-7.client\\src\\app\\admin\\voucher\\viewvoucher\\viewvoucher.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{8075D0B9-E74D-50BA-3C42-CF8594709BCF}|angular-project-7.client\\angular-project-7.client.esproj|c:\\users\\orange\\source\\repos\\angular-project\\angular-project-7\\angular-project-7.client\\src\\app\\admin\\product\\view-product\\view-product.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
       "RelativeMoniker": "D:0:0:{8075D0B9-E74D-50BA-3C42-CF8594709BCF}|angular-project-7.client\\angular-project-7.client.esproj|solutionrelative:angular-project-7.client\\src\\app\\admin\\product\\view-product\\view-product.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
     },
@@ -95,6 +103,32 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "viewvoucher.component.ts",
+              "DocumentMoniker": "C:\\Users\\Orange\\source\\repos\\Angular-Project\\Angular-Project-7\\angular-project-7.client\\src\\app\\Admin\\Voucher\\viewvoucher\\viewvoucher.component.ts",
+              "RelativeDocumentMoniker": "angular-project-7.client\\src\\app\\Admin\\Voucher\\viewvoucher\\viewvoucher.component.ts",
+              "ToolTip": "C:\\Users\\Orange\\source\\repos\\Angular-Project\\Angular-Project-7\\angular-project-7.client\\src\\app\\Admin\\Voucher\\viewvoucher\\viewvoucher.component.ts",
+              "RelativeToolTip": "angular-project-7.client\\src\\app\\Admin\\Voucher\\viewvoucher\\viewvoucher.component.ts",
+              "ViewState": "AgIAADsAAAAAAAAAAAAwwGEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-04-06T10:11:34.664Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "viewvoucher.component.html",
+              "DocumentMoniker": "C:\\Users\\Orange\\source\\repos\\Angular-Project\\Angular-Project-7\\angular-project-7.client\\src\\app\\Admin\\Voucher\\viewvoucher\\viewvoucher.component.html",
+              "RelativeDocumentMoniker": "angular-project-7.client\\src\\app\\Admin\\Voucher\\viewvoucher\\viewvoucher.component.html",
+              "ToolTip": "C:\\Users\\Orange\\source\\repos\\Angular-Project\\Angular-Project-7\\angular-project-7.client\\src\\app\\Admin\\Voucher\\viewvoucher\\viewvoucher.component.html",
+              "RelativeToolTip": "angular-project-7.client\\src\\app\\Admin\\Voucher\\viewvoucher\\viewvoucher.component.html",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAmwDQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-04-06T10:11:18.237Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "view-product.component.ts",
               "DocumentMoniker": "C:\\Users\\Orange\\source\\repos\\Angular-Project\\Angular-Project-7\\angular-project-7.client\\src\\app\\Admin\\Product\\view-product\\view-product.component.ts",
               "RelativeDocumentMoniker": "angular-project-7.client\\src\\app\\Admin\\Product\\view-product\\view-product.component.ts",
@@ -107,7 +141,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "view-product.component.spec.ts",
               "DocumentMoniker": "C:\\Users\\Orange\\source\\repos\\Angular-Project\\Angular-Project-7\\angular-project-7.client\\src\\app\\Admin\\Product\\view-product\\view-product.component.spec.ts",
               "RelativeDocumentMoniker": "angular-project-7.client\\src\\app\\Admin\\Product\\view-product\\view-product.component.spec.ts",
@@ -120,7 +154,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "view-product.component.html",
               "DocumentMoniker": "C:\\Users\\Orange\\source\\repos\\Angular-Project\\Angular-Project-7\\angular-project-7.client\\src\\app\\Admin\\Product\\view-product\\view-product.component.html",
               "RelativeDocumentMoniker": "angular-project-7.client\\src\\app\\Admin\\Product\\view-product\\view-product.component.html",
@@ -133,7 +167,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "edit-product.component.ts",
               "DocumentMoniker": "C:\\Users\\Orange\\source\\repos\\Angular-Project\\Angular-Project-7\\angular-project-7.client\\src\\app\\Admin\\Product\\edit-product\\edit-product.component.ts",
               "RelativeDocumentMoniker": "angular-project-7.client\\src\\app\\Admin\\Product\\edit-product\\edit-product.component.ts",
@@ -146,7 +180,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "add-product.component.ts",
               "DocumentMoniker": "C:\\Users\\Orange\\source\\repos\\Angular-Project\\Angular-Project-7\\angular-project-7.client\\src\\app\\Admin\\Product\\add-product\\add-product.component.ts",
               "RelativeDocumentMoniker": "angular-project-7.client\\src\\app\\Admin\\Product\\add-product\\add-product.component.ts",
@@ -159,7 +193,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "add-product.component.html",
               "DocumentMoniker": "C:\\Users\\Orange\\source\\repos\\Angular-Project\\Angular-Project-7\\angular-project-7.client\\src\\app\\Admin\\Product\\add-product\\add-product.component.html",
               "RelativeDocumentMoniker": "angular-project-7.client\\src\\app\\Admin\\Product\\add-product\\add-product.component.html",
@@ -172,7 +206,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "view-category.component.ts",
               "DocumentMoniker": "C:\\Users\\Orange\\source\\repos\\Angular-Project\\Angular-Project-7\\angular-project-7.client\\src\\app\\Admin\\Category\\view-category\\view-category.component.ts",
               "RelativeDocumentMoniker": "angular-project-7.client\\src\\app\\Admin\\Category\\view-category\\view-category.component.ts",
@@ -185,7 +219,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "view-category.component.html",
               "DocumentMoniker": "C:\\Users\\Orange\\source\\repos\\Angular-Project\\Angular-Project-7\\angular-project-7.client\\src\\app\\Admin\\Category\\view-category\\view-category.component.html",
               "RelativeDocumentMoniker": "angular-project-7.client\\src\\app\\Admin\\Category\\view-category\\view-category.component.html",
@@ -198,7 +232,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "edit-category.component.ts",
               "DocumentMoniker": "C:\\Users\\Orange\\source\\repos\\Angular-Project\\Angular-Project-7\\angular-project-7.client\\src\\app\\Admin\\Category\\edit-category\\edit-category.component.ts",
               "RelativeDocumentMoniker": "angular-project-7.client\\src\\app\\Admin\\Category\\edit-category\\edit-category.component.ts",
@@ -211,7 +245,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "edit-category.component.html",
               "DocumentMoniker": "C:\\Users\\Orange\\source\\repos\\Angular-Project\\Angular-Project-7\\angular-project-7.client\\src\\app\\Admin\\Category\\edit-category\\edit-category.component.html",
               "RelativeDocumentMoniker": "angular-project-7.client\\src\\app\\Admin\\Category\\edit-category\\edit-category.component.html",
@@ -224,7 +258,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "add-category.component.ts",
               "DocumentMoniker": "C:\\Users\\Orange\\source\\repos\\Angular-Project\\Angular-Project-7\\angular-project-7.client\\src\\app\\Admin\\Category\\add-category\\add-category.component.ts",
               "RelativeDocumentMoniker": "angular-project-7.client\\src\\app\\Admin\\Category\\add-category\\add-category.component.ts",
@@ -237,7 +271,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
               "Title": "shope.component.ts",
               "DocumentMoniker": "C:\\Users\\Orange\\source\\repos\\Angular-Project\\Angular-Project-7\\angular-project-7.client\\src\\app\\User\\shope\\shope.component.ts",
               "RelativeDocumentMoniker": "angular-project-7.client\\src\\app\\User\\shope\\shope.component.ts",
@@ -250,7 +284,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 14,
               "Title": "sidebar.component.html",
               "DocumentMoniker": "C:\\Users\\Orange\\source\\repos\\Angular-Project\\Angular-Project-7\\angular-project-7.client\\src\\app\\User\\sidebar\\sidebar.component.html",
               "RelativeDocumentMoniker": "angular-project-7.client\\src\\app\\User\\sidebar\\sidebar.component.html",
@@ -262,7 +296,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 16,
               "Title": "sidebar.component.ts",
               "DocumentMoniker": "C:\\Users\\Orange\\source\\repos\\Angular-Project\\Angular-Project-7\\angular-project-7.client\\src\\app\\User\\sidebar\\sidebar.component.ts",
               "RelativeDocumentMoniker": "angular-project-7.client\\src\\app\\User\\sidebar\\sidebar.component.ts",
@@ -274,7 +308,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 18,
               "Title": "shop.service.ts",
               "DocumentMoniker": "C:\\Users\\Orange\\source\\repos\\Angular-Project\\Angular-Project-7\\angular-project-7.client\\src\\app\\Services\\shop.service.ts",
               "RelativeDocumentMoniker": "angular-project-7.client\\src\\app\\Services\\shop.service.ts",
@@ -286,7 +320,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 17,
               "Title": "checkout.component.ts",
               "DocumentMoniker": "C:\\Users\\Orange\\source\\repos\\Angular-Project\\Angular-Project-7\\angular-project-7.client\\src\\app\\User\\checkout\\checkout.component.ts",
               "RelativeDocumentMoniker": "angular-project-7.client\\src\\app\\User\\checkout\\checkout.component.ts",
@@ -302,7 +336,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 15,
               "Title": "cart.component.html",
               "DocumentMoniker": "C:\\Users\\Orange\\source\\repos\\Angular-Project\\Angular-Project-7\\angular-project-7.client\\src\\app\\User\\cart\\cart.component.html",
               "RelativeDocumentMoniker": "angular-project-7.client\\src\\app\\User\\cart\\cart.component.html",
@@ -314,7 +348,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 19,
               "Title": "checkout.component.html",
               "DocumentMoniker": "C:\\Users\\Orange\\source\\repos\\Angular-Project\\Angular-Project-7\\angular-project-7.client\\src\\app\\User\\checkout\\checkout.component.html",
               "RelativeDocumentMoniker": "angular-project-7.client\\src\\app\\User\\checkout\\checkout.component.html",

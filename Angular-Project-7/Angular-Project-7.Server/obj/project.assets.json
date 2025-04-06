@@ -484,11 +484,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Orange\\Desktop\\Angular-Project\\Angular-Project-7\\Angular-Project-7.Server\\Angular-Project-7.Server.csproj",
+      "projectUniqueName": "C:\\Users\\Orange\\Source\\Repos\\Angular-Project\\Angular-Project-7\\Angular-Project-7.Server\\Angular-Project-7.Server.csproj",
       "projectName": "Angular-Project-7.Server",
-      "projectPath": "C:\\Users\\Orange\\Desktop\\Angular-Project\\Angular-Project-7\\Angular-Project-7.Server\\Angular-Project-7.Server.csproj",
+      "projectPath": "C:\\Users\\Orange\\Source\\Repos\\Angular-Project\\Angular-Project-7\\Angular-Project-7.Server\\Angular-Project-7.Server.csproj",
       "packagesPath": "C:\\Users\\Orange\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Orange\\Desktop\\Angular-Project\\Angular-Project-7\\Angular-Project-7.Server\\obj\\",
+      "outputPath": "C:\\Users\\Orange\\Source\\Repos\\Angular-Project\\Angular-Project-7\\Angular-Project-7.Server\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -503,6 +503,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -521,7 +522,7 @@
         "auditLevel": "low",
         "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "9.0.200"
+      "SdkAnalysisLevel": "9.0.100"
     },
     "frameworks": {
       "net8.0": {
@@ -555,7 +556,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
