@@ -114,18 +114,19 @@ export class ShopeComponent implements OnInit {
           reverseButtons: true,
           confirmButtonColor: '#ff6565',
         }).then((result) => {
-          if (result.isConfirmed) {
-            window.location.href = '/wishlist';
-          }
+          //if (result.isConfirmed) {
+          //  window.location.href = '/wishlist';
+          //}
         });
       } else {
         Swal.fire({
           title: 'Oops!',
           text: 'You already added this item.',
-          icon: 'error',
+          icon: 'info',
           showCancelButton: true,
           cancelButtonText: 'Close',
           confirmButtonText: 'Go to Wishlist',
+          confirmButtonColor: '#ff6565',
           reverseButtons: true,
         }).then((result) => {
           if (result.isConfirmed) {
@@ -231,21 +232,40 @@ export class ShopeComponent implements OnInit {
 
   addToCart(product: any) {
     this._ser.getAllCart().subscribe(cartData => {
-      this.cart = cartData.find(c => c.userId == 1); 
+      this.cart = cartData.find(c => c.userId == 1);
 
       if (this.cart) {
         const cartData = {
           productId: product.id,
           productName: product.name,
           productPrice: product.price,
-          quantity: 1, 
+          quantity: 1,
           cartId: this.cart.id,
           imageUrl: product.image
         };
 
         this._ser.postToCartItems(cartData).subscribe((response) => {
           console.log('✅ Product added to cart:', response);
-          this.router.navigate(['/cart'], { queryParams: { productId: product.id } });
+
+          // Show success swal notification with "Go to Cart" and "Close" buttons
+          Swal.fire({
+            icon: 'success',
+            title: 'Product added to cart!',
+            text: 'You can view your cart now.',
+            showCancelButton: true,
+            confirmButtonText: 'Go to Cart',
+            confirmButtonColor: '#ff6565',
+            cancelButtonText: 'Close',
+            focusCancel: true
+          }).then((result) => {
+            if (result.isConfirmed) {
+              // Navigate to cart if "Go to Cart" is clicked
+              this.router.navigate(['/cart'], { queryParams: { productId: product.id } });
+            } else {
+              // Close the alert if "Close" is clicked
+              Swal.close();
+            }
+          });
         });
       } else {
         console.error("❌ Cart not found for user. Creating a new cart...");
@@ -266,12 +286,32 @@ export class ShopeComponent implements OnInit {
 
           this._ser.postToCartItems(cartData).subscribe((response) => {
             console.log('✅ Product added to new cart:', response);
-            this.router.navigate(['/cart'], { queryParams: { productId: product.id } });
+
+            // Show success swal notification with "Go to Cart" and "Close" buttons
+            Swal.fire({
+              icon: 'success',
+              title: 'Product added to cart!',
+              text: 'You can view your cart now.',
+              showCancelButton: true,
+              confirmButtonText: 'Go to Cart',
+              confirmButtonColor: '#ff6565',
+              cancelButtonText: 'Close',
+              focusCancel: true
+            }).then((result) => {
+              if (result.isConfirmed) {
+                // Navigate to cart if "Go to Cart" is clicked
+                this.router.navigate(['/cart'], { queryParams: { productId: product.id } });
+              } else {
+                // Close the alert if "Close" is clicked
+                Swal.close();
+              }
+            });
           });
         });
       }
     });
   }
+
 
   ////////////////////////////////////////////////////////////////////////////////////
 }

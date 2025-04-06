@@ -1,5 +1,24 @@
 import { Component } from '@angular/core';
 import { ShopService } from '../../Services/shop.service';
+import { Router } from '@angular/router';
+import Swal from 'sweetalert2';
+
+export interface Product {
+  id: number;
+  name: string;
+  description: string;
+  createdAt: Date;
+  price: number;
+  discount: string;
+  image: string;
+  categoryId: number;
+  categoryName: string;
+  oldPrice: number;
+  rating: number;
+  reviews: number;
+  isFavourite?: boolean;
+}
+
 
 @Component({
   selector: 'app-index',
@@ -12,7 +31,7 @@ export class IndexComponent {
   displayedCategories: any[] = [];
   discountedProducts: any[] = [];
 
-  constructor(private ser: ShopService) { }
+  constructor(private ser: ShopService, private router: Router) { }
 
   ngOnInit() {
     this.getTopCategories()
@@ -68,4 +87,122 @@ export class IndexComponent {
     }
     return price.toFixed(2);
   }
+
+  ////////////////////////////////////
+
+
+  cart: any;
+
+  addToCart(product: any) {
+    this.ser.getAllCart().subscribe(cartData => {
+      this.cart = cartData.find(c => c.userId == 1);
+
+      if (this.cart) {
+        const cartData = {
+          productId: product.id,
+          productName: product.name,
+          productPrice: product.price,
+          quantity: 1,
+          cartId: this.cart.id,
+          imageUrl: product.image
+        };
+
+        this.ser.postToCartItems(cartData).subscribe((response) => {
+          console.log('✅ Product added to cart:', response);
+
+          Swal.fire({
+            icon: 'success',
+            title: 'Added to Cart!',
+            text: `${product.name} has been successfully added to your cart.`,
+            confirmButtonText: 'OK',
+            confirmButtonColor: '#ff6565'
+          });
+        });
+      } else {
+        console.warn("🛒 Cart not found. Creating a new one...");
+
+        const newCart = { userId: 1 };
+
+        this.ser.postToCart(newCart).subscribe((newCartResponse: any) => {
+          this.cart = newCartResponse;
+
+          const cartData = {
+            productId: product.id,
+            productName: product.name,
+            productPrice: product.price,
+            quantity: 1,
+            cartId: this.cart.id,
+            imageUrl: product.image
+          };
+
+          this.ser.postToCartItems(cartData).subscribe((response) => {
+            console.log('✅ Product added to new cart:', response);
+
+            Swal.fire({
+              icon: 'success',
+              title: 'Added to Cart!',
+              text: `${product.name} has been successfully added to your cart.`,
+              confirmButtonText: 'OK',
+              confirmButtonColor: '#ff6565'
+            });
+          });
+        });
+      }
+    });
+  }
+
+
+  /////////
+  productsContainer: any;
+
+
+  getProductById(productId: number): void {
+    const product = this.productsContainer.find(
+      (product:any) => product.id == productId
+    );
+
+    if (product) {
+      const wishlistData = JSON.parse(localStorage.getItem('wishlist') || '[]');
+      const isAlreadyInWishlist = wishlistData.some(
+        (item: Product) => item.id === product.id
+      );
+
+      if (!isAlreadyInWishlist) {
+        wishlistData.push(product);
+        localStorage.setItem('wishlist', JSON.stringify(wishlistData));
+
+        Swal.fire({
+          title: 'Product added to wishlist!',
+          icon: 'success',
+          imageUrl: product.image,
+          imageWidth: 100,
+          imageHeight: 100,
+          imageAlt: 'Product Image',
+          confirmButtonText: 'Got it!',
+          reverseButtons: true,
+          confirmButtonColor: '#ff6565',
+        }).then((result) => {
+          //if (result.isConfirmed) {
+          //  window.location.href = '/wishlist';
+          //}
+        });
+      } else {
+        Swal.fire({
+          title: 'Oops!',
+          text: 'You already added this item.',
+          icon: 'info',
+          showCancelButton: true,
+          cancelButtonText: 'Close',
+          confirmButtonText: 'Go to Wishlist',
+          confirmButtonColor: '#ff6565',
+          reverseButtons: true,
+        }).then((result) => {
+          if (result.isConfirmed) {
+            window.location.href = '/wishlist';
+          }
+        });
+      }
+    }
+  }
+
 }

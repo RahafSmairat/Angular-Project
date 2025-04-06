@@ -23,17 +23,17 @@
           <div class="col-lg-6">
             <div class="product-details-thumb">
               <img src="{{product.image}}" width="570" height="693" alt="Image">
-              <span class="flag-new">new</span>
+              <span class="flag-new" *ngIf="+product.discount > 0">On Sale</span>
             </div>
           </div>
           <div class="col-lg-6">
             <div class="product-details-content">
-              <h5 class="product-details-collection">Premioum collection</h5>
+              <!--<h5 class="product-details-collection">Premioum collection</h5>-->
               <!-- share-button.component.html -->
               <!--<button (click)="shareOnFacebook()">Share on Facebook</button>-->
 
               <h3 class="product-details-title">{{product.name}}</h3>
-              <div class="product-details-review mb-7">
+              <!--<div class="product-details-review mb-7">
                 <div class="product-review-icon">
                   <i class="fa fa-star-o"></i>
                   <i class="fa fa-star-o"></i>
@@ -42,13 +42,13 @@
                   <i class="fa fa-star-half-o"></i>
                 </div>
                 <button type="button" class="product-review-show">150 reviews</button>
-              </div>
+              </div>-->
               <p class="mb-7">{{product.description}}</p>
-              <div class="product-details-pro-qty">
+              <!--<div class="product-details-pro-qty">
                 <div class="pro-qty">
                   <input type="text" title="Quantity" value="01">
                 </div>
-              </div>
+              </div>-->
               <div class="product-details-shipping-cost">
                 <button type="submit" class="btn" (click)="shareOnFacebook()"><i class="fa-solid fa-share" style="color: #ffffff;"></i></button>
 
@@ -57,13 +57,14 @@
                 <h4 class="price">{{product.price}}JD</h4>
                 <div class="product-details-cart-wishlist">
                   <button type="button" class="btn-wishlist" data-bs-toggle="modal" data-bs-target="#action-WishlistModal"><i class="fa fa-heart-o"></i></button>
-                  <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#action-CartAddModal">Add to cart</button>
+                  <button (click)="addToCart(product)" type="button" class="btn">Add to cart</button>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="row">
+
+        <!--<div class="row">
           <div class="col-lg-7">
             <div class="nav product-details-nav" id="product-details-nav-tab" role="tablist">
               <button class="nav-link" id="specification-tab" data-bs-toggle="tab" data-bs-target="#specification" type="button" role="tab" aria-controls="specification" aria-selected="false">Specification</button>
@@ -93,9 +94,9 @@
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius velit corporis quo voluptate culpa soluta, esse accusamus, sunt quia omnis amet temporibus sapiente harum quam itaque libero tempore. Ipsum, ducimus. lorem</p>
               </div>
 
-              <div class="tab-pane fade show active" id="review" role="tabpanel" aria-labelledby="review-tab">
+              <div class="tab-pane fade show active" id="review" role="tabpanel" aria-labelledby="review-tab">-->
                 <!--== Start Reviews Content Item ==-->
-                <div class="product-review-item">
+                <!--<div class="product-review-item">
                   <div class="product-review-top">
                     <div class="product-review-thumb">
                       <img src="assets/images/shop/product-details/comment1.webp" alt="Images">
@@ -114,9 +115,9 @@
                   </div>
                   <p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed viverra amet, sodales faucibus nibh. Vivamus amet potenti ultricies nunc gravida duis. Nascetur scelerisque massa sodales.</p>
                   <button type="button" class="review-reply"><i class="fa fa fa-undo"></i></button>
-                </div>
+                </div>-->
                 <!--== End Reviews Content Item ==-->
-              </div>
+              <!--</div>
             </div>
           </div>
           <div class="col-lg-5">
@@ -172,18 +173,19 @@
               </div>
             </div>
           </div>
-        </div>
+        </div>-->
+
       </div>
     </section>
     <!--== End Product Details Area Wrapper ==-->
     <!--== Start Product Banner Area Wrapper ==-->
-    <div class="container">
+    <!--<div class="container">-->
       <!--== Start Product Category Item ==-->
-      <a href="product.html" class="product-banner-item">
+      <!--<a href="product.html" class="product-banner-item">
         <img src="assets/images/shop/banner/7.webp" width="1170" height="240" alt="Image-HasTech">
-      </a>
+      </a>-->
       <!--== End Product Category Item ==-->
-    </div>
+    <!--</div>-->
     <!--== End Product Banner Area Wrapper ==-->
 
   </main>

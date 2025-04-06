@@ -18,6 +18,10 @@
           <input type="text" class="form-control" name="price" [(ngModel)]="productContanier.price">
         </div>
         <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Discount</label>
+          <input type="text" class="form-control" name="discount" [(ngModel)]="productContanier.discount">
+        </div>
+        <div class="mb-3">
           <label for="exampleInputPassword1" class="form-label">Category</label>
           <select class="form-select" name="categoryId" ngModel required>
             <option *ngFor="let item of category" (click)="getSelectedData(item)" [value]="item.id">{{ item.name }}</option>

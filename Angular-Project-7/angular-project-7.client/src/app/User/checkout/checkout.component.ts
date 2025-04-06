@@ -28,6 +28,7 @@ export class CheckoutComponent {
     console.log(this.cartItems)
     this.totalAmount = this.cartItems.reduce((sum, item) => sum + (item.productPrice * item.quantity), 0);
     this.getLoggedInUser();
+    this.getCartItems();
   }
 
   getLoggedInUser() {
@@ -85,5 +86,48 @@ export class CheckoutComponent {
         (error) => console.error('Error adding order item:', error)
       );
     });
+  }
+
+  ////////////////////////////////////////////////////////////////////////
+
+  cartId: number = 1;
+  finalTotalPrice: number = 0;
+  totalPrice: number = 0;
+  voucherCode: string = '';
+  appliedVoucher: any = null;
+  discount: number = 0;
+  discountAmount: number = 0;
+  errorMessage: string = '';
+
+  loggedInUserID: any;
+
+  getCartItems() {
+    this.shopService.getAllCartItems().subscribe(cartData => {
+      this.shopService.getAllProducts().subscribe(productsData => {
+        this.cartItems = cartData.map(cartItem => {
+          const product = productsData.find(p => p.id === cartItem.productId);
+          return {
+            ...cartItem,
+            productName: product ? product.name : 'Unknown Product',
+            productPrice: product ? product.price : 0,
+            imageUrl: product ? product.image : 'assets/images/placeholder.png'
+          };
+        });
+        this.calculateTotal();
+      })
+    })
+  }
+
+  calculateTotal() {
+    this.totalPrice = this.cartItems.reduce((sum, item) => sum + item.productPrice * item.quantity, 0);
+    this.finalTotalPrice = this.totalPrice;
+    if (this.appliedVoucher) {
+      this.applyDiscount();
+    }
+  }
+
+  applyDiscount() {
+    this.discountAmount = (this.totalPrice * this.discount) / 100;
+    this.finalTotalPrice = this.totalPrice - this.discountAmount;
   }
 }

@@ -18,8 +18,9 @@
 }
 
   .btn:hover {
-    background-color: #d18a7b !important;
-    transform: translateY(-3px);
+    /*    background-color: #d18a7b !important;*/
+    /*    transform: translateY(-3px);*/
+    opacity: 0.9;
   }
 
   .btn:active {
@@ -36,16 +37,17 @@
 }
 
 .btn-search, .btn-mic, .btn-reset {
-  background-color: #d18a7b;
+  background-color: #231942;
   color: white;
   border: none;
   padding: 6px 12px;
   border-radius: 5px;
-  transition: 0.3s;
+  /*  transition: 0.3s;*/
 }
 
   .btn-search:hover, .btn-mic:hover, .btn-reset:hover {
-    background-color: #fa9783;
+    background-color: #231942;
+    opacity: .9;
   }
 
 .price-filter {

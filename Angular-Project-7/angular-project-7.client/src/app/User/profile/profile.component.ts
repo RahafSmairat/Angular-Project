@@ -20,6 +20,7 @@ export class ProfileComponent {
     this.getUserData();
     this.getOrders();
     this.getUserOrders();
+    this.getPaymentMethods();
   }
 
   getUserData() {
@@ -44,6 +45,7 @@ export class ProfileComponent {
   Useremail: any
   Order: any
   orderItems: any
+
   getUserOrders() {
     this._ser.getUser().pipe(
       switchMap((user: any) => {
@@ -103,6 +105,14 @@ export class ProfileComponent {
         color: '#5a2a2a',
         confirmButtonColor: '#ff6565',
       });
+    })
+  }
+
+  //////////////////////
+  userPayments: any;
+  getPaymentMethods() {
+    this._ser.getAllPayments().subscribe((payments) => {
+      this.userPayments = payments.filter(payment => payment.userId == this.userData.id);
     })
   }
 }

@@ -182,6 +182,13 @@
 
                     <fieldset>
                       <legend>Saved payment methods</legend>
+                      <div *ngFor="let payment of userPayments">
+                        <p><i class="fa fa-credit-card"></i> {{ payment.type }}</p>
+                        <p>Card Number: ****-****-****-{{ payment.cardNumber.slice(-4) }}</p>
+                        <p>Expiry Date: {{ payment.expiryDate }}</p>
+                        <hr />
+                      </div>
+                      
                     </fieldset>
                   </div>
                 </div>

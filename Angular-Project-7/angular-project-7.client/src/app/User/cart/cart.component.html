@@ -72,9 +72,9 @@
               <button type="button" class="btn-coupon" (click)="applyVoucher()">Apply coupon</button>
 
               <div *ngIf="appliedVoucher" class="voucher-details" style="margin-top:5% !important">
-                <p>✅ Coupon Code: <strong>{{ appliedVoucher.code }}</strong></p>
-                <p>📉 Discount: <strong>{{ discount }}%</strong></p>
-                <p>💰 Discount Amount: <strong>{{ discountAmount }}</strong></p>
+                <p>Coupon Code: <strong>{{ appliedVoucher.code }}</strong></p>
+                <p>Discount: <strong>{{ discount }}%</strong></p>
+                <p>Discount Amount: <strong>{{ discountAmount }}</strong></p>
               </div>
 
               <div *ngIf="errorMessage" class="error-message">
@@ -104,7 +104,7 @@
                   </tr>
                   <tr class="order-total">
                     <th>Total</th>
-                    <td><span class="amount">{{ finalTotalPrice }} JD</span></td>
+                    <td><span class="amount">{{ finalTotalPrice | number: '1.2-2'}} JD</span></td>
                   </tr>
                 </tbody>
               </table>
