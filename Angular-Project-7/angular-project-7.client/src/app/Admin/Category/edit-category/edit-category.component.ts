@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { ShopService } from '../../../Services/shop.service';
 import { ActivatedRoute } from '@angular/router';
 import Swal from 'sweetalert2';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-edit-category',
@@ -12,7 +13,7 @@ export class EditCategoryComponent {
   categoryContainer: any
   categoryId: any
 
-  constructor(private _shop: ShopService, private _active: ActivatedRoute) { }
+  constructor(private _shop: ShopService, private _active: ActivatedRoute, private _route: Router ) { }
 
   ngOnInit() {
     let category = this._active.snapshot.paramMap.get("id");
@@ -32,6 +33,7 @@ export class EditCategoryComponent {
         confirmButtonText: 'OK',
         confirmButtonColor: '#ff6f91' // Custom color for the confirmation button
       });
+      this._route.navigate(['/dashboard/viewCategory']);
     })
   }
 }

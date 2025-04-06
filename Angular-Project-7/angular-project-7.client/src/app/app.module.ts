@@ -39,6 +39,7 @@ import { ReviewsComponent } from './User/reviews/reviews.component';
 import { WishlistComponent } from './User/wishlist/wishlist.component';
 import { TopRatedProductsComponent } from './User/top-rated-products/top-rated-products.component';
 import { OrderItemsComponent } from './User/order-items/order-items.component';
+import { TestComponent } from './User/test/test.component';
 //import { SendReplyComponent } from './Admin/send-reply/send-reply.component';
 
 @NgModule({
@@ -78,7 +79,8 @@ import { OrderItemsComponent } from './User/order-items/order-items.component';
     ReviewsComponent,
     WishlistComponent,
     TopRatedProductsComponent,
-    OrderItemsComponent
+    OrderItemsComponent,
+    TestComponent
   ],
   imports: [
     BrowserModule, HttpClientModule,

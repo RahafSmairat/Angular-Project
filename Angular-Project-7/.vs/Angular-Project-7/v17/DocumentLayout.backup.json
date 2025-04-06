@@ -3,6 +3,30 @@
   "WorkspaceRootPath": "C:\\Users\\Orange\\Desktop\\Angular-Project\\Angular-Project-7\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{8075D0B9-E74D-50BA-3C42-CF8594709BCF}|angular-project-7.client\\angular-project-7.client.esproj|c:\\users\\orange\\desktop\\angular-project\\angular-project-7\\angular-project-7.client\\src\\app\\user\\contact\\contact.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{8075D0B9-E74D-50BA-3C42-CF8594709BCF}|angular-project-7.client\\angular-project-7.client.esproj|solutionrelative:angular-project-7.client\\src\\app\\user\\contact\\contact.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8075D0B9-E74D-50BA-3C42-CF8594709BCF}|angular-project-7.client\\angular-project-7.client.esproj|c:\\users\\orange\\desktop\\angular-project\\angular-project-7\\angular-project-7.client\\src\\app\\user\\contact\\contact.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8075D0B9-E74D-50BA-3C42-CF8594709BCF}|angular-project-7.client\\angular-project-7.client.esproj|solutionrelative:angular-project-7.client\\src\\app\\user\\contact\\contact.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8075D0B9-E74D-50BA-3C42-CF8594709BCF}|angular-project-7.client\\angular-project-7.client.esproj|c:\\users\\orange\\desktop\\angular-project\\angular-project-7\\angular-project-7.client\\src\\app\\admin\\view-users\\view-users.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8075D0B9-E74D-50BA-3C42-CF8594709BCF}|angular-project-7.client\\angular-project-7.client.esproj|solutionrelative:angular-project-7.client\\src\\app\\admin\\view-users\\view-users.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8075D0B9-E74D-50BA-3C42-CF8594709BCF}|angular-project-7.client\\angular-project-7.client.esproj|c:\\users\\orange\\desktop\\angular-project\\angular-project-7\\angular-project-7.client\\src\\app\\admin\\product\\view-product\\view-product.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8075D0B9-E74D-50BA-3C42-CF8594709BCF}|angular-project-7.client\\angular-project-7.client.esproj|solutionrelative:angular-project-7.client\\src\\app\\admin\\product\\view-product\\view-product.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8075D0B9-E74D-50BA-3C42-CF8594709BCF}|angular-project-7.client\\angular-project-7.client.esproj|c:\\users\\orange\\desktop\\angular-project\\angular-project-7\\angular-project-7.client\\src\\app\\admin\\category\\view-category\\view-category.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8075D0B9-E74D-50BA-3C42-CF8594709BCF}|angular-project-7.client\\angular-project-7.client.esproj|solutionrelative:angular-project-7.client\\src\\app\\admin\\category\\view-category\\view-category.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8075D0B9-E74D-50BA-3C42-CF8594709BCF}|angular-project-7.client\\angular-project-7.client.esproj|c:\\users\\orange\\desktop\\angular-project\\angular-project-7\\angular-project-7.client\\src\\app\\admin\\category\\edit-category\\edit-category.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{8075D0B9-E74D-50BA-3C42-CF8594709BCF}|angular-project-7.client\\angular-project-7.client.esproj|solutionrelative:angular-project-7.client\\src\\app\\admin\\category\\edit-category\\edit-category.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{8075D0B9-E74D-50BA-3C42-CF8594709BCF}|angular-project-7.client\\angular-project-7.client.esproj|c:\\users\\orange\\desktop\\angular-project\\angular-project-7\\angular-project-7.client\\src\\app\\user\\about\\about.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{8075D0B9-E74D-50BA-3C42-CF8594709BCF}|angular-project-7.client\\angular-project-7.client.esproj|solutionrelative:angular-project-7.client\\src\\app\\user\\about\\about.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
@@ -19,6 +43,84 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "contact.component.ts",
+              "DocumentMoniker": "C:\\Users\\Orange\\Desktop\\Angular-Project\\Angular-Project-7\\angular-project-7.client\\src\\app\\User\\contact\\contact.component.ts",
+              "RelativeDocumentMoniker": "angular-project-7.client\\src\\app\\User\\contact\\contact.component.ts",
+              "ToolTip": "C:\\Users\\Orange\\Desktop\\Angular-Project\\Angular-Project-7\\angular-project-7.client\\src\\app\\User\\contact\\contact.component.ts",
+              "RelativeToolTip": "angular-project-7.client\\src\\app\\User\\contact\\contact.component.ts",
+              "ViewState": "AgIAABQAAAAAAAAAAADwvyUAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-04-06T11:57:04.301Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "contact.component.html",
+              "DocumentMoniker": "C:\\Users\\Orange\\Desktop\\Angular-Project\\Angular-Project-7\\angular-project-7.client\\src\\app\\User\\contact\\contact.component.html",
+              "RelativeDocumentMoniker": "angular-project-7.client\\src\\app\\User\\contact\\contact.component.html",
+              "ToolTip": "C:\\Users\\Orange\\Desktop\\Angular-Project\\Angular-Project-7\\angular-project-7.client\\src\\app\\User\\contact\\contact.component.html",
+              "RelativeToolTip": "angular-project-7.client\\src\\app\\User\\contact\\contact.component.html",
+              "ViewState": "AgIAACoAAAAAAAAAAAAAADUAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-04-06T11:56:24.756Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "view-users.component.html",
+              "DocumentMoniker": "C:\\Users\\Orange\\Desktop\\Angular-Project\\Angular-Project-7\\angular-project-7.client\\src\\app\\Admin\\view-users\\view-users.component.html",
+              "RelativeDocumentMoniker": "angular-project-7.client\\src\\app\\Admin\\view-users\\view-users.component.html",
+              "ToolTip": "C:\\Users\\Orange\\Desktop\\Angular-Project\\Angular-Project-7\\angular-project-7.client\\src\\app\\Admin\\view-users\\view-users.component.html",
+              "RelativeToolTip": "angular-project-7.client\\src\\app\\Admin\\view-users\\view-users.component.html",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-04-06T11:53:23.881Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "view-category.component.html",
+              "DocumentMoniker": "C:\\Users\\Orange\\Desktop\\Angular-Project\\Angular-Project-7\\angular-project-7.client\\src\\app\\Admin\\Category\\view-category\\view-category.component.html",
+              "RelativeDocumentMoniker": "angular-project-7.client\\src\\app\\Admin\\Category\\view-category\\view-category.component.html",
+              "ToolTip": "C:\\Users\\Orange\\Desktop\\Angular-Project\\Angular-Project-7\\angular-project-7.client\\src\\app\\Admin\\Category\\view-category\\view-category.component.html",
+              "RelativeToolTip": "angular-project-7.client\\src\\app\\Admin\\Category\\view-category\\view-category.component.html",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABcAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-04-06T11:50:08.76Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "view-product.component.html",
+              "DocumentMoniker": "C:\\Users\\Orange\\Desktop\\Angular-Project\\Angular-Project-7\\angular-project-7.client\\src\\app\\Admin\\Product\\view-product\\view-product.component.html",
+              "RelativeDocumentMoniker": "angular-project-7.client\\src\\app\\Admin\\Product\\view-product\\view-product.component.html",
+              "ToolTip": "C:\\Users\\Orange\\Desktop\\Angular-Project\\Angular-Project-7\\angular-project-7.client\\src\\app\\Admin\\Product\\view-product\\view-product.component.html",
+              "RelativeToolTip": "angular-project-7.client\\src\\app\\Admin\\Product\\view-product\\view-product.component.html",
+              "ViewState": "AgIAABwAAAAAAAAAAAAAACMAAABMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-04-06T11:43:54.838Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "edit-category.component.ts",
+              "DocumentMoniker": "C:\\Users\\Orange\\Desktop\\Angular-Project\\Angular-Project-7\\angular-project-7.client\\src\\app\\Admin\\Category\\edit-category\\edit-category.component.ts",
+              "RelativeDocumentMoniker": "angular-project-7.client\\src\\app\\Admin\\Category\\edit-category\\edit-category.component.ts",
+              "ToolTip": "C:\\Users\\Orange\\Desktop\\Angular-Project\\Angular-Project-7\\angular-project-7.client\\src\\app\\Admin\\Category\\edit-category\\edit-category.component.ts",
+              "RelativeToolTip": "angular-project-7.client\\src\\app\\Admin\\Category\\edit-category\\edit-category.component.ts",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-04-06T11:41:56.668Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "about.component.html",
               "DocumentMoniker": "C:\\Users\\Orange\\Desktop\\Angular-Project\\Angular-Project-7\\angular-project-7.client\\src\\app\\User\\about\\about.component.html",
               "RelativeDocumentMoniker": "angular-project-7.client\\src\\app\\User\\about\\about.component.html",

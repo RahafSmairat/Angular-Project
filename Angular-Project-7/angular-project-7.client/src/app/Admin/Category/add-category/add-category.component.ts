@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ShopService } from '../../../Services/shop.service';
 import Swal from 'sweetalert2';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -10,7 +11,7 @@ import Swal from 'sweetalert2';
 })
 export class AddCategoryComponent {
 
-  constructor(private _service: ShopService) { }
+  constructor(private _service: ShopService,  private _route: Router) { }
 
   ngOnInit() { }
 
@@ -25,6 +26,7 @@ export class AddCategoryComponent {
         color: '#5a2a2a', // Dark text color for contrast
         confirmButtonColor: '#ff6f91', // A darker pink for the button
       });
+      this._route.navigate(['/dashboard/viewCategory']);
     }, error => {
       Swal.fire({
         title: 'Error!',

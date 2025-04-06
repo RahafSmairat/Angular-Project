@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { ShopService } from '../../../Services/shop.service';
 import { ActivatedRoute } from '@angular/router';
 import Swal from 'sweetalert2';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-edit-product',
@@ -14,7 +15,7 @@ export class EditProductComponent {
   selectedId: any = null; // Store selected category ID
   selectedCategoryName: string = 'Category'; // Store selected category name for the button
   category: any[] = [];   // Store category list
-  constructor(private _service: ShopService, private _active: ActivatedRoute) { }
+  constructor(private _service: ShopService, private _active: ActivatedRoute, private _route: Router) { }
 
   ngOnInit() {
     this.getData();
@@ -41,6 +42,7 @@ export class EditProductComponent {
         confirmButtonText: 'OK',
         confirmButtonColor: '#ff6f91' // Custom color for the confirmation button
       });
+      this._route.navigate(['/dashboard/viewProduct']);
     })
   }
 

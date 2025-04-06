@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ShopService } from '../../../Services/shop.service';
 import Swal from 'sweetalert2';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-add-product',
@@ -12,7 +13,7 @@ export class AddProductComponent {
   selectedId: any = null; // Store selected category ID
   selectedCategoryName: string = 'Category'; // Store selected category name for the button
 
-  constructor(private _shop: ShopService) { }
+  constructor(private _shop: ShopService, private _route: Router) { }
 
   ngOnInit() {
     this.getData();
@@ -36,6 +37,7 @@ export class AddProductComponent {
         color: '#5a2a2a', // Dark text color for contrast
         confirmButtonColor: '#ff6f91', // A darker pink for the button
       });
+      this._route.navigate(['/dashboard/viewProduct']);
     }, error => {
       Swal.fire({
         title: 'Error!',

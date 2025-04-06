@@ -24,7 +24,8 @@ export class ContactComponent {
           title: 'Success!',
           text: this.successMessage,
           icon: 'success',
-          confirmButtonText: 'Okay'
+          confirmButtonText: 'Okay',
+          confirmButtonColor: '#ff6565'
         });
       },
       () => {
@@ -34,7 +35,8 @@ export class ContactComponent {
           title: 'Error!',
           text: this.errorMessage,
           icon: 'error',
-          confirmButtonText: 'Okay'
+          confirmButtonText: 'Okay',
+          confirmButtonColor: '#ff6565',
         });
       }
     );
