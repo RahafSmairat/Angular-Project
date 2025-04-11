@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { ShopService } from '../../Services/shop.service';
 import { Router } from '@angular/router';
+import { UserService } from '../../Services/user.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-cart',
@@ -23,11 +25,15 @@ export class CartComponent {
   totalAmount: number = 0;
   errorMessage: string = '';
 
-  constructor(private shopService: ShopService, private router: Router) { }
+  constructor(private shopService: ShopService, private router: Router, private _ser: UserService) { }
 
   ngOnInit(): void {
     this.getCartItems();
   }
+
+  //ngDoCheck() {
+  //  this.getCartItems();
+  //}
   /////////////////////////////////////////////////
 
   getCartItems() {
@@ -110,12 +116,47 @@ export class CartComponent {
   applyDiscount() {
     this.discountAmount = (this.totalPrice * this.discount) / 100;
     this.finalTotalPrice = this.totalPrice - this.discountAmount;
+    if (this.discountAmount > 0) {
+      this.shopService.setFinalTotalPrice(this.finalTotalPrice);
+    }
+    else {
+      this.shopService.setFinalTotalPrice(this.totalPrice);
+    }
   }
 
   ///////////////////////////////////////////////////////////////Checkout
+  userData: any;
   goToCheckout() {
-    this.shopService.setCartItems(this.cartItems);
-    console.log(this.cartItems)
-    this.router.navigate(['/checkout']);
+    this._ser.getLoggedInUsers().subscribe(
+      (data) => {
+        if (!data || (Array.isArray(data) && data.length === 0) || (Object.keys(data).length === 0 && data.constructor === Object)) {
+          // Show Swal if the response is empty or null
+          Swal.fire({
+            title: 'Please Login First!',
+            text: 'You need to login to place an order.',
+            icon: 'warning',
+            confirmButtonText: 'Login',
+            cancelButtonText: 'Close',
+            color: '#5a2a2a',
+            confirmButtonColor: '#ff6565',
+            cancelButtonColor: '#231942',
+            showCancelButton: true,
+          }).then((result) => {
+            if (result.isConfirmed) {
+              this.router.navigate(['/login']);
+            } else {
+              Swal.close();
+            }
+          });
+        } else {
+          this.shopService.setCartItems(this.cartItems);
+          this.router.navigate(['/checkout']);
+        }
+      },
+      (error) => {
+        console.error('Error fetching user data', error);
+      }
+    );
   }
+
 }

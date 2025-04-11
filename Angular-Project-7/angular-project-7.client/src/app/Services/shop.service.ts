@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { forkJoin, map, Observable, of } from 'rxjs';
+import { BehaviorSubject, forkJoin, map, Observable, of } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -99,6 +99,17 @@ export class ShopService {
 
   getProductByID(id: any) {
     return this.http.get(`${this.productsApi}/${id}`)
+  }
+
+  deleteProductsByCategory(categoryId: any): void {
+    this.getAllProducts().subscribe(products => {
+      const productsToDelete = products.filter(p => p.categoryId == categoryId);
+      productsToDelete.forEach(product => {
+        this.deleteProducts(product.id).subscribe(() => {
+          console.log(`Deleted product ID: ${product.id}`);
+        });
+      });
+    });
   }
   ///
 
@@ -211,5 +222,14 @@ export class ShopService {
 
   getCartItems(): Observable<any[]> {
     return of(this.cartItems);
+  }
+
+  ////////////////////
+
+  private finalTotalPriceSubject = new BehaviorSubject<number>(0);
+  finalTotalPrice$ = this.finalTotalPriceSubject.asObservable();
+
+  setFinalTotalPrice(price: number) {
+    this.finalTotalPriceSubject.next(price);
   }
 }

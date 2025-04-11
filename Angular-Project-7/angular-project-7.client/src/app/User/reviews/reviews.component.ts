@@ -77,7 +77,8 @@ export class ReviewsComponent {
             title: 'Success!',
             text: 'Your review has been updated successfully.',
             icon: 'success',
-            confirmButtonText: 'OK'
+            confirmButtonText: 'OK',
+            confirmButtonColor:'#ff6565'
           });
           this.loadReviews();
           this.resetForm();
@@ -101,8 +102,8 @@ export class ReviewsComponent {
       text: 'You won’t be able to undo this action!',
       icon: 'warning',
       showCancelButton: true,
-      confirmButtonColor: '#d33',
-      cancelButtonColor: '#3085d6',
+      confirmButtonColor: '#ff6565',
+      cancelButtonColor: '#231942',
       confirmButtonText: 'Yes, delete it!',
       cancelButtonText: 'Cancel'
     }).then(result => {
@@ -190,9 +191,10 @@ export class ReviewsComponent {
         this._ser.postToReviews(reviewData).subscribe(response => {
           Swal.fire({
             title: 'Success!',
-            text: 'Your review has been submitted successfully.',
+            text: 'Thank you for your review.',
             icon: 'success',
-            confirmButtonText: 'OK'
+            confirmButtonText: 'OK',
+            confirmButtonColor:'#ff6565'
           });
           this.resetForm();
           this.loadReviews();

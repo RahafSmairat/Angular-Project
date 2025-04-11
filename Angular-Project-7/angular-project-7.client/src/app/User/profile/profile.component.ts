@@ -14,6 +14,11 @@ import Swal from 'sweetalert2';
 export class ProfileComponent {
   userData: any = null;
   show = false;
+  form = {
+    currentPassword: '',
+    newPassword: '',
+    confirmPassword: ''
+  };
   constructor(private ser: ShopService, private _ser: UserService, private route: Router, private router: HttpClient, private Activep: ActivatedRoute) { }
 
   ngOnInit() {
@@ -96,15 +101,32 @@ export class ProfileComponent {
 
   submitPayment(form: any) {
     this.paymentData.userId = this.userData.id
-    this._ser.postToPayments(this.paymentData).subscribe(() => {
-      Swal.fire({
-        title: 'Payment Method Was Added!',
-        text: 'The Payment Method has been successfully added.',
-        icon: 'success',
-        confirmButtonText: 'OK',
-        color: '#5a2a2a',
-        confirmButtonColor: '#ff6565',
-      });
+    this._ser.getAllPayments().subscribe((data) => {
+      var payments = data.filter(p => p.userId == this.userData.id)
+      if (payments.length == 2) {
+        Swal.fire({
+          title: 'Cannot Add More Than Two Payments!',
+          icon: 'warning',
+          confirmButtonText: 'OK',
+          color: '#5a2a2a',
+          confirmButtonColor: '#ff6565',
+        }).then(response => {
+          this.getPaymentMethods();
+        });
+      } else {
+        this._ser.postToPayments(this.paymentData).subscribe(() => {
+          Swal.fire({
+            title: 'Payment Method Was Added!',
+            text: 'The Payment Method has been successfully added.',
+            icon: 'success',
+            confirmButtonText: 'OK',
+            color: '#5a2a2a',
+            confirmButtonColor: '#ff6565',
+          }).then(response => {
+            this.getPaymentMethods();
+          });
+        })
+      }
     })
   }
 
@@ -113,6 +135,139 @@ export class ProfileComponent {
   getPaymentMethods() {
     this._ser.getAllPayments().subscribe((payments) => {
       this.userPayments = payments.filter(payment => payment.userId == this.userData.id);
+    })
+  }
+
+  delete(id: any) {
+    this._ser.deletePayment(id).subscribe(() => {
+      Swal.fire({
+        title: 'Payment Method Was deleted!',
+        icon: 'success',
+        confirmButtonText: 'OK',
+        color: '#5a2a2a',
+        confirmButtonColor: '#ff6565',
+      }).then(response => {
+        this.getPaymentMethods();
+      });
+    })
+  }
+  ///////////////
+
+  resetPassword() {
+    if (!this.form.currentPassword || !this.form.newPassword || !this.form.confirmPassword) {
+      Swal.fire({
+        icon: 'error',
+        title: 'Error',
+        text: 'Please fill in all fields.',
+        confirmButtonColor: '#ff6565'
+      });
+      return;
+    }
+
+    if (this.form.currentPassword !== this.userData.password) {
+      Swal.fire({
+        icon: 'error',
+        title: 'Error',
+        text: 'Current password is incorrect.',
+        confirmButtonColor: '#ff6565'
+      });
+      return;
+    }
+
+    if (this.form.newPassword !== this.form.confirmPassword) {
+      Swal.fire({
+        icon: 'error',
+        title: 'Error',
+        text: 'New passwords do not match.',
+        confirmButtonColor: '#ff6565'
+      });
+      return;
+    }
+
+    const updatedUser = {
+      ...this.userData,
+      password: this.form.newPassword
+    };
+
+    this._ser.editUser(this.userData.id, updatedUser).subscribe({
+      next: () => {
+        Swal.fire({
+          icon: 'success',
+          title: 'Success',
+          text: 'Password updated successfully.',
+          confirmButtonColor: '#ff6565'
+        });
+        this.form = { currentPassword: '', newPassword: '', confirmPassword: '' };
+      },
+      error: () => {
+        Swal.fire({
+          icon: 'error',
+          title: 'Error',
+          text: 'Something went wrong. Try again later.',
+          confirmButtonColor: '#ff6565'
+        });
+      }
+    });
+  }
+
+  /////////////////
+
+  addressData = {
+    street: '',
+    city: '',
+    country: '',
+    userId: ''
+  };
+
+  submitAddress(form: any) {
+    this.addressData.userId = this.userData.id
+    this._ser.getAllAddresses().subscribe((data) => {
+      var adresses = data.filter(p => p.userId == this.userData.id)
+      if (adresses.length == 2) {
+        Swal.fire({
+          title: 'Cannot Add More Than Two Addresses!',
+          icon: 'warning',
+          confirmButtonText: 'OK',
+          color: '#5a2a2a',
+          confirmButtonColor: '#ff6565',
+        }).then(response => {
+          this.getAddresses();
+        });
+      } else {
+        this._ser.postToAddresses(this.addressData).subscribe(() => {
+          Swal.fire({
+            title: 'Address Was Added!',
+            text: 'The Address has been successfully added.',
+            icon: 'success',
+            confirmButtonText: 'OK',
+            color: '#5a2a2a',
+            confirmButtonColor: '#ff6565',
+          }).then(response => {
+            this.getAddresses();
+          });
+        })
+      }
+    })
+  }
+
+  userAddresses: any;
+  getAddresses() {
+    this._ser.getAllAddresses().subscribe((addresses) => {
+      this.userAddresses = addresses.filter(a => a.userId == this.userData.id);
+    })
+  }
+
+  deleteAddress(id: any) {
+    this._ser.deleteAddress(id).subscribe(() => {
+      Swal.fire({
+        title: 'Address Was deleted!',
+        icon: 'success',
+        confirmButtonText: 'OK',
+        color: '#5a2a2a',
+        confirmButtonColor: '#ff6565',
+      }).then(response => {
+        this.getAddresses();
+      });
     })
   }
 }

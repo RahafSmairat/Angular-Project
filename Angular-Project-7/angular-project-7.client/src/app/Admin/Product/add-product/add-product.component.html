@@ -23,9 +23,13 @@
         </div>
         <div class="mb-3">
           <label for="exampleInputPassword1" class="form-label">Category</label>
-          <select class="form-select" name="categoryId" ngModel required>
-            <option *ngFor="let item of category" (click)="getSelectedData(item)" [value]="item.id">{{ item.name }}</option>
+          <!--<select class="form-select" name="categoryId" ngModel required>
+    <option *ngFor="let item of category" (click)="getSelectedData(item)" [value]="item.id">{{ item.name }}</option>
+  </select>-->
+          <select class="form-select" name="categoryId" [(ngModel)]="selectedId" (change)="getSelectedData($event)" required>
+            <option *ngFor="let item of category" [value]="item.id">{{ item.name }}</option>
           </select>
+
         </div>
         <div class="mb-3 d-flex" style="justify-content:space-between">
           <div style="width:47%">

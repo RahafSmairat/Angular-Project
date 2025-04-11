@@ -19,14 +19,14 @@
     <!--== Start Product Details Area Wrapper ==-->
     <section class="section-space">
       <div class="container">
-        <div class="row product-details">
-          <div class="col-lg-6">
+        <div class="row product-details justify-content-center">
+          <div class="col-lg-6" style="max-width: 40%;">
             <div class="product-details-thumb">
               <img src="{{product.image}}" width="570" height="693" alt="Image">
               <span class="flag-new" *ngIf="+product.discount > 0">On Sale</span>
             </div>
           </div>
-          <div class="col-lg-6">
+          <div class="col-lg-6" style="align-content: center;">
             <div class="product-details-content">
               <!--<h5 class="product-details-collection">Premioum collection</h5>-->
               <!-- share-button.component.html -->
@@ -63,7 +63,7 @@
             </div>
           </div>
         </div>
-
+        <app-reviews></app-reviews>
         <!--<div class="row">
           <div class="col-lg-7">
             <div class="nav product-details-nav" id="product-details-nav-tab" role="tablist">

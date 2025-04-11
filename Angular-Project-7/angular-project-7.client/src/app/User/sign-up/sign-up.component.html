@@ -1,4 +1,4 @@
-    <!--== Wrapper Start ==-->
+<!--== Wrapper Start ==-->
 <div class="wrapper">
 
   <header class="header-area sticky-header header-transparent">
@@ -29,25 +29,47 @@
                 <form #signUpForm="ngForm" (ngSubmit)="signUp(signUpForm.value)">
                   <div class="form-group mb-6">
                     <label for="register_username">Full Name <sup>*</sup></label>
-                    <input type="text" id="register_username" ngModel name="fullName">
+                    <input type="text" id="register_username" ngModel name="fullName" required #fullName="ngModel">
+                    <div *ngIf="fullName.invalid && fullName.touched" class="text-danger">
+                      Full Name is required.
+                    </div>
                   </div>
+
                   <div class="form-group mb-6">
                     <label for="register_email">Email <sup>*</sup></label>
-                    <input type="email" id="register_email" ngModel name="email">
+                    <input type="email" id="register_email" ngModel name="email" required email #email="ngModel">
+                    <div *ngIf="email.invalid && email.touched" class="text-danger">
+                      Please enter a valid email.
+                    </div>
                   </div>
+
                   <div class="form-group mb-6">
                     <label for="register_phone">Phone Number <sup>*</sup></label>
-                    <input type="text" id="register_phone" ngModel name="phone">
+                    <input type="text" id="register_phone" ngModel name="phone" required pattern="^07\d{8}$" #phone="ngModel">
+                    <div *ngIf="phone.invalid && phone.touched" class="text-danger">
+                      Please enter a valid phone number (07********).
+                    </div>
                   </div>
+
                   <div class="form-group mb-6">
                     <label for="register_pwsd">Password <sup>*</sup></label>
-                    <input type="password" id="register_pwsd" ngModel name="password">
+                    <input type="password" id="register_pwsd" ngModel name="password" required minlength="6" #password="ngModel">
+                    <div *ngIf="password.invalid && password.touched" class="text-danger">
+                      Password must be at least 6 characters long.
+                    </div>
                   </div>
-                  <p *ngIf="msg" class="alert alert-danger">{{msg}}</p>
+
+                  <p *ngIf="msg" class="alert alert-danger alert-dismissible fade show d-flex justify-content-between align-items-center" role="alert">
+                    {{ msg }}
+                    <button type="button" class="btn-close ms-3" aria-label="Close" (click)="msg = ''">
+                      <i class="fas fa-times"></i>
+                    </button>
+                  </p>
+
                   <div class="form-group">
-                    <!--<p class="desc mb-4">Your personal data will be used to support your experience throughout this website, to manage access to your account, and for other purposes described in our privacy policy.</p>-->
-                    <button type="submit" class="btn">Register</button>
+                    <button type="submit" class="btn" [disabled]="signUpForm.invalid">Register</button>
                   </div>
+
                   <a class="lost-password" routerLink="/login">Already have an account?</a>
                 </form>
               </div>
@@ -61,3 +83,4 @@
 
   </main>
 </div>
+<!--== Wrapper End ==-->

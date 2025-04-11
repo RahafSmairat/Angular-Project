@@ -5,7 +5,7 @@
       <div class="col-5 col-lg-2 col-xl-1">
         <div class="header-logo">
           <a routerLink="">
-            <img class="logo-main" src="assets/images/logo2.png" width="95" height="68" alt="Logo" />
+            <img class="logo-main" src="assets/images/logo5.png" width="200" height="100" alt="Logo" />
           </a>
         </div>
       </div>
@@ -31,8 +31,8 @@
               <i class="fas fa-heart"></i>
             </span>
           </button>
-
-          <button class="header-action-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#AsideOffcanvasCart" aria-controls="AsideOffcanvasCart">
+          <!--type="button" data-bs-toggle="offcanvas" data-bs-target="#AsideOffcanvasCart" aria-controls="AsideOffcanvasCart"-->
+          <a class="header-action-btn" routerLink="/cart">
             <span class="icon">
               <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <rect class="icon-rect" width="30" height="30" fill="url(#pattern2)" />
@@ -44,7 +44,7 @@
                 </defs>
               </svg>
             </span>
-          </button>
+          </a>
 
           <a class="header-action-btn" routerLink="/profile" *ngIf="isLogged">
             <span class="icon">
@@ -59,8 +59,8 @@
               </svg>
             </span>
           </a>
-          <a class="header-action-btn" routerLink="/login" *ngIf="!isLogged">Login</a>
-          <a class="header-action-btn" routerLink="/signup" style="width: 20%;" *ngIf="!isLogged">Sign Up</a>
+          <a class="header-action-btn" routerLink="/login" *ngIf="!isLogged" style="width: 10%;">Login</a>
+          <!--<a class="header-action-btn" routerLink="/signup" style="width: 20%;" *ngIf="!isLogged">Sign Up</a>-->
           <button class="header-action-btn" *ngIf="isLogged" (click)="LogOut()" title="Logout"><i class="fa-solid fa-right-from-bracket"></i></button>
           <div id="google_translate_element" class="p-2"></div>
           <button class="header-menu-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#AsideOffcanvasMenu" aria-controls="AsideOffcanvasMenu">

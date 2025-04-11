@@ -3,21 +3,28 @@ import { ShopService } from '../../Services/shop.service';
 import { HttpClient } from '@angular/common/http';
 import Swal from 'sweetalert2';
 import { Router } from '@angular/router';
+import { DecimalPipe } from '@angular/common';
 
 @Component({
   selector: 'app-checkout',
   templateUrl: './checkout.component.html',
-  styleUrl: './checkout.component.css'
+  styleUrl: './checkout.component.css',
+  providers: [DecimalPipe]
 })
 export class CheckoutComponent {
   cartItems: any[] = [];
   loggedInUser: any;
   paymentMethodId: number = 1;
   totalAmount: number = 0;
-
-  constructor(private shopService: ShopService, private http: HttpClient, private route: Router) { }
+  finalPrice = 0;
+  formattedFinalTotalPrice: string = '';
+  constructor(private shopService: ShopService, private http: HttpClient, private route: Router, private decimalPipe: DecimalPipe) { }
 
   ngOnInit(): void {
+    this.shopService.finalTotalPrice$.subscribe(price => {
+      this.finalPrice = price;
+      this.formattedFinalTotalPrice = this.decimalPipe.transform(this.finalPrice, '1.2-2')!;
+    });
     //this.cartItems = this.shopService.getCartItems();
     this.shopService.getCartItems().subscribe(
       (items) => {
@@ -129,5 +136,11 @@ export class CheckoutComponent {
   applyDiscount() {
     this.discountAmount = (this.totalPrice * this.discount) / 100;
     this.finalTotalPrice = this.totalPrice - this.discountAmount;
+  }
+  //////////////
+
+  onPrivacyLinkClick(event: Event) {
+    event.preventDefault();  // Prevent form submission
+    this.route.navigate(['/privacy']);  // Navigate to the privacy policy
   }
 }

@@ -40,6 +40,9 @@ import { WishlistComponent } from './User/wishlist/wishlist.component';
 import { TopRatedProductsComponent } from './User/top-rated-products/top-rated-products.component';
 import { OrderItemsComponent } from './User/order-items/order-items.component';
 import { TestComponent } from './User/test/test.component';
+import { HomeComponent } from './Admin/home/home.component';
+import { CommonModule } from '@angular/common';
+import { PrivacyAndPolicyComponent } from './User/privacy-and-policy/privacy-and-policy.component';
 //import { SendReplyComponent } from './Admin/send-reply/send-reply.component';
 
 @NgModule({
@@ -80,12 +83,14 @@ import { TestComponent } from './User/test/test.component';
     WishlistComponent,
     TopRatedProductsComponent,
     OrderItemsComponent,
-    TestComponent
+    TestComponent,
+    HomeComponent,
+    PrivacyAndPolicyComponent,
   ],
   imports: [
     BrowserModule, HttpClientModule,
     AppRoutingModule,
-    FormsModule,
+    FormsModule, CommonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

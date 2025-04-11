@@ -17,12 +17,15 @@
     <div class="container page-header-area pt-10 pb-9">
       <div class="wishlist-container">
         <div *ngFor="let product of filteredProductsById" class="wishlist-item">
-          <img [src]="product.image" alt="Product Image">
+          <a routerLink="/Product-Details/{{product.id}}"><img [src]="product.image" alt="Product Image"></a>
           <div class="wishlist-item-details">
             <div class="wishlist-item-title">{{ product.name }}</div>
             <div class="wishlist-item-price">{{ product.price }} JD</div>
           </div>
-          <button class="remove-btn" (click)="removeFromWishlist(product.id)">Remove</button>
+          <button class="remove-btn" (click)="removeFromWishlist(product.id)"><i class="fas fa-trash"></i></button>
+          <button (click)="addToCart(product)" type="button" class="cart-btn">
+            <span><i class="fas fa-shopping-cart"></i> Add to cart</span>
+          </button>
         </div>
       </div>
     </div>

@@ -1,5 +1,5 @@
 .page-header-area {
-  padding-top: 100px !important;
+/*  padding-top: 100px !important;*/
   padding-bottom: 9px;
 }
 
@@ -9,7 +9,7 @@ body {
 
 .reviews-section {
   background-color: #fff;
-  padding: 40px 0;
+  padding: 20px 0;
 }
 
 .container {
@@ -20,7 +20,7 @@ body {
 .reviews-summary h2 {
   font-size: 32px;
   font-weight: bold;
-  color: #e7a895;
+  color: black;
   margin-bottom: 20px;
 }
 
@@ -49,16 +49,17 @@ body {
 .review-card {
   background-color: #fff;
   padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  margin-bottom: 20px;
-  transition: transform 0.3s ease;
+/*  border-radius: 8px;*/
+  /*  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);*/
+  border-bottom: 1px solid #231942;
+  margin-bottom: 50px;
+  /*  transition: transform 0.3s ease;*/
 }
 
-  .review-card:hover {
+/*  .review-card:hover {
     transform: translateY(-5px);
   }
-
+*/
 .review-header {
   display: flex;
   align-items: center;

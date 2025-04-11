@@ -17,6 +17,7 @@ export class OrderItemsComponent {
     this.getOrders();
     this.getUserOrders();
     this.getOrderrItems();
+    this.getOrder();
   }
 
   UserOrderss: any
@@ -25,6 +26,7 @@ export class OrderItemsComponent {
   Useremail: any
   Order: any
   orderItems: any
+  OrderContainer:any
 
   getUserOrders() {
     this.ser.getUser().pipe(
@@ -51,6 +53,13 @@ export class OrderItemsComponent {
   getOrders() {
     this._ser.getAllOrders().subscribe((data) => {
       this.Orders = data;
+    })
+  }
+
+  getOrder() {
+    this.Order = this.Activep.snapshot.paramMap.get('id');
+    this._ser.getAllOrders().subscribe((data) => {
+      this.OrderContainer = data.find(o => o.id == this.Order)
     })
   }
   getOrderrItems() {

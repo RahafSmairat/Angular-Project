@@ -1,9 +1,22 @@
+
+<!--<section class="page-header-area pt-10 pb-9" data-bg-color="#FFF3DA" style="background-color: #FFF3DA; margin-top: 80px">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-5">
+        <div class="page-header-st3-content text-center text-md-start">
+          <h2 class="page-header-title">Product Reviews</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>-->
+
 <div class="reviews-section page-header-area">
   <div class="container">
     <!-- Summary Rating Section -->
     <div class="reviews-summary text-center mb-5">
-      <h2 class="section-title">Product Reviews</h2>
-      <div class="rating-summary d-flex justify-content-center align-items-center">
+      <h2 class="section-title" style="text-align:left">Product Reviews</h2>
+      <div class="rating-summary d-flex align-items-center">
         <span class="stars">
           <ng-container *ngFor="let star of stars">
             <i class="fas fa-star" *ngIf="star === 1"></i>
@@ -25,7 +38,7 @@
             <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
                  alt="User Avatar" class="review-avatar">
             <div class="review-info ml-3">
-              <span class="review-author">{{ review.name }}</span>
+              <span class="review-author">{{ review.name }} </span>
               <span class="review-date">{{ review.createdAt | date:'short' }}</span>
             </div>
           </div>
@@ -46,7 +59,7 @@
 
 
 
-    <div class="add-review mt-5">
+    <div class="add-review mt-1">
       <h5>Add Your Review</h5>
       <textarea [(ngModel)]="newReview.comment" class="form-control" rows="4" placeholder="Write your review..."></textarea>
       <div class="rating-input mt-3 text-center">
@@ -57,7 +70,7 @@
              (click)="setRating(i + 1)"></i>
         </span>
       </div>
-      <button (click)="submitReview()" class="btn btn-primary mt-3">
+      <button (click)="submitReview()" class="btn">
         {{ isEditing ? 'Edit Review' : 'Submit Review' }}
       </button>
 

@@ -25,11 +25,13 @@ export class SidebarComponent {
 
   constructor(private shopService: ShopService, private router: Router) { }
 
-  ngOnInit(): void {
-    this.getCartItems();
-  }
+  //ngOnInit(): void {
+  //  this.getCartItems();
+  //}
   /////////////////////////////////////////////////
-
+  //ngDoCheck() {
+  //  this.getCartItems();
+  //}
   getCartItems() {
     this.shopService.getAllCartItems().subscribe(cartData => {
       this.shopService.getAllProducts().subscribe(productsData => {

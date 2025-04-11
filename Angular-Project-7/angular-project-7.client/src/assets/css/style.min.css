@@ -527,7 +527,7 @@ hr {
 
 @media only screen and (max-width:767px),only screen and (min-width:768px) and (max-width:991px),only screen and (min-width:992px) and (max-width:1199px),only screen and (min-width:1200px) and (max-width:1549px) {
   .header-logo img {
-    width: 70px
+    width: 100px
   }
 }
 
@@ -1770,7 +1770,7 @@ hr {
   line-height: 1;
   background: none;
   border-radius: 0;
-  padding: 0 18px 0 0
+/*  padding: 0 18px 0 0*/
 }
 
   .nice-select .current {

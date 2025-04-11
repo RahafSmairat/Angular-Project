@@ -25,8 +25,8 @@
             <div class="my-account-tab-menu nav nav-tabs" id="nav-tab" role="tablist">
               <button class="nav-link active" id="dashboad-tab" data-bs-toggle="tab" data-bs-target="#dashboad" type="button" role="tab" aria-controls="dashboad" aria-selected="true">Account</button>
               <button class="nav-link" id="orders-tab" data-bs-toggle="tab" data-bs-target="#orders" type="button" role="tab" aria-controls="orders" aria-selected="false"> Orders</button>
-              <button class="nav-link" id="payment-method-tab" data-bs-toggle="tab" data-bs-target="#payment-method" type="button" role="tab" aria-controls="payment-method" aria-selected="false">Payment Method</button>
-              <button class="nav-link" id="address-edit-tab" data-bs-toggle="tab" data-bs-target="#address-edit" type="button" role="tab" aria-controls="address-edit" aria-selected="false">address</button>
+              <button class="nav-link" id="payment-method-tab" data-bs-toggle="tab" data-bs-target="#payment-method" type="button" role="tab" aria-controls="payment-method" aria-selected="false" (click)="getPaymentMethods()">Payment Method</button>
+              <button class="nav-link" id="address-edit-tab" data-bs-toggle="tab" data-bs-target="#address-edit" type="button" role="tab" aria-controls="address-edit" aria-selected="false" (click)="getAddresses()">address</button>
               <button class="nav-link" id="account-info-tab" data-bs-toggle="tab" data-bs-target="#account-info" type="button" role="tab" aria-controls="account-info" aria-selected="false">Reset Password</button>
             </div>
           </div>
@@ -183,7 +183,7 @@
                     <fieldset>
                       <legend>Saved payment methods</legend>
                       <div *ngFor="let payment of userPayments">
-                        <p><i class="fa fa-credit-card"></i> {{ payment.type }}</p>
+                        <p><i class="fa fa-credit-card"></i> {{ payment.type }} <button (click)="delete(payment.id)" style="background-color:transparent;border:none"><i class="fas fa-trash" style="color: #ff6565"></i></button></p>
                         <p>Card Number: ****-****-****-{{ payment.cardNumber.slice(-4) }}</p>
                         <p>Expiry Date: {{ payment.expiryDate }}</p>
                         <hr />
@@ -196,15 +196,59 @@
               <div class="tab-pane fade" id="address-edit" role="tabpanel" aria-labelledby="address-edit-tab">
                 <div class="myaccount-content">
                   <h3>Billing Address</h3>
-                  <address>
+                  <!--<address>
+    <p><strong>{{ userData.name }}</strong></p>
+    <p>
+      Al-Sheikh Khalil St., Irbid <br>
+      Jordan.
+    </p>
+    <p>Mobile: {{ userData.phone }}</p>
+  </address>
+  <a href="#/" class="check-btn sqr-btn"><i class="fa fa-edit"></i> Edit Address</a>-->
+                <div class="account-details-form">
+                  <form #paymentForm="ngForm" (ngSubmit)="submitAddress(paymentForm)">
+                    <fieldset>
+                      <legend>Add address</legend>
+
+                      <div class="single-input-item">
+                        <label for="current-pwd" class="required">Street Name</label>
+                        <input type="text" id="current-pwd" placeholder="" name="street" [(ngModel)]="addressData.street" pattern="^[0-9]{16}$" />
+                      </div>
+                      <div class="row">
+                        <div class="col-lg-6">
+                          <div class="single-input-item">
+                            <label for="new-pwd" class="required">City</label>
+                            <input type="text" id="new-pwd" name="city" [(ngModel)]="addressData.city" />
+                          </div>
+                        </div>
+                        <div class="col-lg-6">
+                          <div class="single-input-item">
+                            <label for="confirm-pwd">Country</label>
+                            <input type="text" id="confirm-pwd" name="country" placeholder="" class="required" [(ngModel)]="addressData.country" />
+                          </div>
+                        </div>
+
+                      </div>
+                    </fieldset>
+                    <div class="single-input-item" style="margin-top:10px">
+                      <button type="submit" class="check-btn sqr-btn">Add Address</button>
+                    </div>
+                  </form>
+
+                </div>
+
+                <fieldset>
+                  <legend>Saved Addresses</legend>
+                  <address *ngFor="let address of userAddresses">
+                    <a (click)="deleteAddress(address.id)" class="check-btn sqr-btn"><i class="fas fa-trash"></i></a>
                     <p><strong>{{ userData.name }}</strong></p>
                     <p>
-                      Al-Sheikh Khalil St., Irbid <br>
-                      Jordan.
+                      {{address.street}} St., {{address.city}} <br>
+                      {{address.country}}.
                     </p>
                     <p>Mobile: {{ userData.phone }}</p>
                   </address>
-                  <a href="#/" class="check-btn sqr-btn"><i class="fa fa-edit"></i> Edit Address</a>
+                </fieldset>
                 </div>
               </div>
               <!--=======================Account Details==========================================-->
@@ -212,31 +256,32 @@
                 <div class="myaccount-content">
                   <h3>Reset Password</h3>
                   <div class="account-details-form">
-                    <form action="#">
+                    <form (ngSubmit)="resetPassword()" #resetForm="ngForm">
                       <fieldset>
                         <div class="single-input-item">
                           <label for="current-pwd" class="required">Current Password</label>
-                          <input type="password" id="current-pwd" />
+                          <input type="password" id="current-pwd" name="currentPassword" [(ngModel)]="form.currentPassword" required />
                         </div>
                         <div class="row">
                           <div class="col-lg-6">
                             <div class="single-input-item">
                               <label for="new-pwd" class="required">New Password</label>
-                              <input type="password" id="new-pwd" />
+                              <input type="password" id="new-pwd" name="newPassword" [(ngModel)]="form.newPassword" required />
                             </div>
                           </div>
                           <div class="col-lg-6">
                             <div class="single-input-item">
                               <label for="confirm-pwd" class="required">Confirm Password</label>
-                              <input type="password" id="confirm-pwd" />
+                              <input type="password" id="confirm-pwd" name="confirmPassword" [(ngModel)]="form.confirmPassword" required />
                             </div>
                           </div>
                         </div>
                       </fieldset>
                       <div class="single-input-item">
-                        <button class="check-btn sqr-btn">Save Changes</button>
+                        <button class="check-btn sqr-btn" type="submit">Save Changes</button>
                       </div>
                     </form>
+
                   </div>
                 </div>
               </div>

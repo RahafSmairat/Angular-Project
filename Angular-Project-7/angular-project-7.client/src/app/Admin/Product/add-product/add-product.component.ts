@@ -9,9 +9,9 @@ import { Router } from '@angular/router';
   styleUrl: './add-product.component.css'
 })
 export class AddProductComponent {
-  category: any[] = [];   // Store category list
-  selectedId: any = null; // Store selected category ID
-  selectedCategoryName: string = 'Category'; // Store selected category name for the button
+  category: any[] = [];   
+  selectedId: any = null; 
+  selectedCategoryName: string = 'Category'; 
 
   constructor(private _shop: ShopService, private _route: Router) { }
 
@@ -33,9 +33,8 @@ export class AddProductComponent {
         text: 'The Product has been successfully added.',
         icon: 'success',
         confirmButtonText: 'OK',
-        // Soft pink background
-        color: '#5a2a2a', // Dark text color for contrast
-        confirmButtonColor: '#ff6f91', // A darker pink for the button
+        color: '#5a2a2a', 
+        confirmButtonColor: '#ff6f91', 
       });
       this._route.navigate(['/dashboard/viewProduct']);
     }, error => {
@@ -52,8 +51,17 @@ export class AddProductComponent {
   }
   
 
-  getSelectedData(item: any) {
-    this.selectedId = item.id;
-    this.selectedCategoryName = item.name;  // Update button text with selected category name
+  //getSelectedData(item: any) {
+  //  this.selectedId = item.id;
+  //  this.selectedCategoryName = item.name;
+  //}
+
+  getSelectedData(event: any) {
+    const selectedCategoryId = event.target.value;
+    const selectedCategory = this.category.find(item => item.id === selectedCategoryId);
+
+    this.selectedId = selectedCategoryId;
+    this.selectedCategoryName = selectedCategory ? selectedCategory.name : null;
   }
+
 }

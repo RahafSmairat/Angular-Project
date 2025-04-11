@@ -45,6 +45,12 @@
                 <span class="price">x {{item.quantity}}</span>
               </td>
             </tr>
+            <tr >
+              <th style="text-align:left">Requested On</th><td colspan="3" style="text-align:left"> {{OrderContainer.createdAt | date:'short'}}</td>
+            </tr>
+            <tr style="text-align:left">
+              <th style="text-align:left">Total</th> <td colspan="3" style="text-align:left">{{OrderContainer.totalAmount}} JD</td>
+            </tr>
           </tbody>
         </table>
       </form>

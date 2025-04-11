@@ -29,6 +29,8 @@ import { SendReplyComponent } from './Admin/send-reply/send-reply.component';
 import { ReviewsComponent } from './User/reviews/reviews.component';
 import { WishlistComponent } from './User/wishlist/wishlist.component';
 import { OrderItemsComponent } from './User/order-items/order-items.component';
+import { HomeComponent } from './Admin/home/home.component';
+import { PrivacyAndPolicyComponent } from './User/privacy-and-policy/privacy-and-policy.component';
 
 const routes: Routes = [
   { path: '', component: IndexComponent },
@@ -59,13 +61,14 @@ const routes: Routes = [
       { path: "addProduct", component: AddProductComponent },
       { path: "viewProduct", component: ViewProductComponent },
       { path: "editProduct/:id", component: EditProductComponent },
-      { path: "sendreply", component: SendReplyComponent }
-
+      { path: "sendreply", component: SendReplyComponent },
+      { path: '', component: HomeComponent }
     ]
   },
   { path: "reviews/:id", component: ReviewsComponent },
   { path: "wishlist", component: WishlistComponent },
-  { path: "order-items/:id", component: OrderItemsComponent }
+  { path: "order-items/:id", component: OrderItemsComponent },
+  { path: "privacy", component: PrivacyAndPolicyComponent }
 
 ];
 @NgModule({

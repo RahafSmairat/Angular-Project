@@ -28,15 +28,16 @@ h2 {
   text-transform: uppercase;
 }
 
-.wishlist-item {
+.wishlist-item{
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
   padding: 10px;
-  border-radius: 8px;
-  background-color: #f9f9f9;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  /* border-radius: 8px; */
+  /* background-color: #f9f9f9; */
+  /* box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); */
+  border-bottom: 1px solid #231942;
 }
 
   .wishlist-item img {
@@ -63,8 +64,8 @@ h2 {
   margin-top: 5px;
 }
 
-.remove-btn {
-  background-color: #FF948A;
+.cart-btn {
+  background-color: #231942;
   border: none;
   padding: 8px 12px;
   color: white;
@@ -72,7 +73,23 @@ h2 {
   border-radius: 8px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  margin-left: 10px;
 }
+
+  .cart-btn:hover{
+      opacity:0.9;
+  }
+
+  .remove-btn {
+    background-color: #FF948A;
+    border: none;
+    padding: 8px 12px;
+    color: white;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
 
   .remove-btn:hover {
     background-color: #d18b77;

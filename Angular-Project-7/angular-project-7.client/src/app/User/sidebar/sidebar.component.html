@@ -135,9 +135,9 @@
     <h1 class="d-none" id="offcanvasRightLabel">Shopping Cart</h1>
     <button class="btn-aside-cart-close" data-bs-dismiss="offcanvas" aria-label="Close">Shopping Cart <i class="fa fa-chevron-right"></i></button>
   </div>
-  <div class="offcanvas-body">
+  <div >
     <ul class="aside-cart-product-list">
-      <li class="aside-product-list-item" *ngFor="let item of cartItems">
+      <li  *ngFor="let item of cartItems">
         <a (click)="removeFromCart(item.id)">×</a>
         <a href="product-details.html">
           <img [src]="item.imageUrl" width="68" height="84" alt="Image">

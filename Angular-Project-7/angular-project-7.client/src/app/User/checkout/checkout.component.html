@@ -20,7 +20,7 @@
       <div class="container">
         <div class="checkout-page-coupon-wrap">
           <!--== Start Checkout Coupon Accordion ==-->
-          <div class="coupon-accordion" id="CouponAccordion">
+          <!--<div class="coupon-accordion" id="CouponAccordion">
             <div class="card">
               <h3>
                 <i class="fa fa-info-circle"></i>
@@ -47,7 +47,7 @@
                 </div>
               </div>
             </div>
-          </div>
+          </div>-->
           <!--== End Checkout Coupon Accordion ==-->
         </div>
         <div class="row">
@@ -143,7 +143,7 @@
                   <tfoot class="table-foot">
                     <tr class="cart-subtotal">
                       <th>Subtotal</th>
-                      <td>{{ totalPrice}} JD</td>
+                      <td>{{formattedFinalTotalPrice}} JD</td>
                     </tr>
                     <tr class="shipping">
                       <th>Shipping</th>
@@ -151,7 +151,7 @@
                     </tr>
                     <tr class="order-total">
                       <th>Total </th>
-                      <td>{{ totalPrice}} JD</td>
+                      <td>{{formattedFinalTotalPrice}} JD</td>
                     </tr>
                   </tfoot>
                 </table>
@@ -168,7 +168,8 @@
                       </div>
                     </div>
                   </div>
-                  <p class="p-text">Your personal data will be used to process your order, support your experience throughout this website, and for other purposes described in our <a href="#/">privacy policy.</a></p>
+                  <p class="p-text">
+                    Your personal data will be used to process your order, support your experience throughout this website, and for other purposes described in our <a routerLink="/privacy" (click)="onPrivacyLinkClick($event)">privacy policy</a></p>
                   <div class="agree-policy">
                     <div class="custom-control custom-checkbox">
                       <input type="checkbox" id="privacy" class="custom-control-input visually-hidden">

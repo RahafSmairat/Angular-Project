@@ -19,21 +19,18 @@
     <!--== Start Shop Top Bar Area Wrapper ==-->
     <section class="shop-top-bar-area py-3">
       <div class="container">
-        <div class="shop-top-bar d-flex flex-wrap align-items-center justify-content-between p-3 gap-3 rounded">
-
-          <div class="search-bar d-flex align-items-center flex-grow-1">
+        <div class="shop-top-bar d-flex align-items-center justify-content-center p-3 gap-3 rounded">
+          <div class="search-bar d-flex align-items-center flex-grow-1" style="width: 70%;justify-self: center;">
             <input type="text" class="form-control search-input" placeholder="Search for a product..."
                    [(ngModel)]="searchQuery" (keyup)="onSearchChange()" />
-            <button class="btn btn-search ms-2" (click)="onSearchChange()">
+            <button class="btn btn-search ms-1" (click)="onSearchChange()" style="line-height:10px">
               <i class="fas fa-search"></i> <!-- Font Awesome icon -->
             </button>
-            <button class="btn btn-mic ms-2" (click)="startVoiceSearch()">
+            <button class="btn btn-mic ms-1" (click)="startVoiceSearch()" style="line-height:10px">
               <i class="fas fa-microphone"></i> <!-- Font Awesome icon -->
             </button>
           </div>
-
-
-          <select class="form-select select-sorting" (change)="sortProducts($event)">
+          <select class="form-select select-sorting" (change)="sortProducts($event)" style="width:20.3%">
             <option value="">Sort by</option>
 
             <option value="az">A-Z</option>
@@ -44,18 +41,14 @@
             <option value="old-new">Oldest</option>
           </select>
 
-
-
-          <select class="form-select select-category" (change)="onCategoryChange($event)">
+          <select class="form-select select-category" (change)="onCategoryChange($event)" style="width:20.3%">
             <option value="">All Categories</option>
             <option *ngFor="let category of categoriesContainer" [value]="category.id">{{ category.name }}</option>
           </select>
 
-
-
-          <a href="javascript:void(0);" class="btn" (click)="fetchProducts()" style="margin: 40px auto; background: #FF948A; border: none; color: white; ">
-            <i class="bi bi-arrow-repeat"></i> View all products
-          </a>
+          <!--<a  style="width: 20.3%; background: #FF948A; border: none; color: white; " href="javascript:void(0);" class="btn" (click)="fetchProducts()">
+    <i class="bi bi-arrow-repeat"></i> View all products
+  </a>-->
 
         </div>
       </div>
@@ -63,7 +56,7 @@
 
     <!--== End Shop Top Bar Area Wrapper ==-->
     <!--== Start Product Category Area Wrapper ==-->
-    <section class="section-space pb-0" style="margin-top:200px;">
+    <section class="section-space pb-0">
       <div class="container">
         <div class="row g-3 g-md-4 g-lg-5">
           <div *ngFor="let category of categoriesContainer" class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
@@ -86,14 +79,14 @@
               <div class="product-thumb">
                 <a class="d-block" routerLink="/Product-Details/{{product.id}}">
                   <img [src]="product.image" alt="Product Image" class="product-category-item" style=" background: transparent !important; ">
-                  <span class="flag-new" *ngIf="+product.discount > 0">On Sale</span>
+                  <span class="flag-new" *ngIf="+product.discount > 0" style=" top: 60px; right: 20px;">On Sale</span>
                 </a>
 
                 <div class="product-action">
 
                   <button type="button"
                           class="product-action-btn action-btn-quick-view"
-                          [routerLink]="['/reviews', product.id]">
+                          [routerLink]="['/Product-Details', product.id]">
                     <i class="fas fa-star"></i>
                   </button>
 

@@ -63,6 +63,7 @@ export class ViewCategoryComponent {
       this.categoryLength = this.categoryContainer.length;
     });
   }
+  productContainer: any
 
   DeleteCategory(id: number) {
     Swal.fire({
@@ -74,38 +75,37 @@ export class ViewCategoryComponent {
       }
     });
 
-    this._shop.getCategoryByCategoryId(id).subscribe(
-      (categoryC) => {
         Swal.close();
+        this._shop.getAllProducts().subscribe((data) => {
+          this.productContainer = data.filter(item => item.categoryId === id);
+      
+          if (this.productContainer.length > 0) {
 
-        if (this.categoryContainer.length > 0) {
-          Swal.fire({
-            title: 'This category contains products!',
-            text: 'Are you sure you want to delete it?',
-            icon: 'warning',
-            showCancelButton: true,
-            confirmButtonColor: '#ff6f91',
-            cancelButtonColor: '#ff4c6a',
-            confirmButtonText: 'Yes, delete it!'
-          }).then((result) => {
-            if (result.isConfirmed) {
-              this.confirmDelete(id);
-            }
-          });
-        } else {
-          this.confirmDelete(id);
-        }
-      },
-      (error) => {
-        Swal.close();
-        Swal.fire('Error', 'Failed to fetch category details. Please try again.', 'error');
-        console.error('Error fetching category:', error);
+            Swal.fire({
+              title: 'This category contains products!',
+              text: 'Are you sure you want to delete it?',
+              icon: 'warning',
+              showCancelButton: true,
+              confirmButtonColor: '#ff6f91',
+              cancelButtonColor: '#ff4c6a',
+              confirmButtonText: 'Yes, delete it!'
+            }).then((result) => {
+              if (result.isConfirmed) {
+                this.confirmDelete(id);
+              }
+            });
+          } else {
+            this.confirmDelete(id);
+          }
+
+
+        });
+       
       }
-    );
-  }
 
   confirmDelete(categoryId: number) {
     this._shop.deleteCategory(categoryId).subscribe(() => {
+      this._shop.deleteProductsByCategory(categoryId);
       Swal.fire("Deleted!", "Category has been deleted.", "success");
       this.ViewAllCategories();
     }, error => {
